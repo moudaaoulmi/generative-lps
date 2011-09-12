@@ -8,6 +8,8 @@ import org.aspectj.org.eclipse.jdt.core.search.LocalVariableDeclarationMatch;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.core.ICompilationUnit;
@@ -53,8 +55,10 @@ public class ArchitectureModelResourceVisitor implements ResourceClient {
 
 	public void visit(IResource resource) {
 		String resourceName = resource.getName();
-		String resourcePath = resource.getProjectRelativePath().removeFirstSegments(1).toString();
+		resource.getProjectRelativePath().toOSString();
+		resource.getProjectRelativePath().removeFileExtension().toString().replace("/", ".");
 		String resourcePhysicalPath = resource.getProjectRelativePath().toString();
+		
 
 		if ( resource.getProjectRelativePath().segmentCount() == 1 ) {	    
 			if ( JavaCore.create(resource) instanceof IPackageFragmentRoot ) {
@@ -87,12 +91,13 @@ public class ArchitectureModelResourceVisitor implements ResourceClient {
 				//Colocar para varrer o arquivo e encontrar metodos e atributos anotados.
 				ArchitectureClass parentClass = (ArchitectureClass)architectureContent.getElementByPath(resourcePhysicalPath);
 				
+				
 				for(FieldDeclaration field : getFields(file)){
-					this.architectureContent.addAttribute(getFieldDeclarationString(field), resourcePhysicalPath, parentClass);
+					this.architectureContent.addAttribute(getFieldName(field) ,getFieldDeclarationString(field), resourcePhysicalPath, parentClass);
 				}
 				
 				for(org.eclipse.jdt.core.dom.MethodDeclaration method : getMethods(file)){
-					this.architectureContent.addMethod(getMethodDeclarationString(method), resourcePhysicalPath, parentClass);
+					this.architectureContent.addMethod(method.getName().toString() , getMethodDeclarationString(method), resourcePhysicalPath, parentClass);					
 				}
 				
 //				for(NormalAnnotation normalAnnotation : getNormalAnnotations(file)){
@@ -197,6 +202,9 @@ public class ArchitectureModelResourceVisitor implements ResourceClient {
 		CompilationUnit compilationUnit = (CompilationUnit) parser.createAST(null);
 		
 		List types = compilationUnit.types(); 
+		file.getFullPath();
+		
+		file.getName();
 		TypeDeclaration typeDec = (TypeDeclaration) types.get(0); 
 
 		return Arrays.asList(typeDec.getMethods()); 
@@ -225,6 +233,8 @@ public class ArchitectureModelResourceVisitor implements ResourceClient {
 		
 		IMethodBinding meu = method.resolveBinding();
 		
+		
+		
 //		for(Object modifier :  method.modifiers()){
 //			methodNameString += modifier.toString() + " ";
 //		}
@@ -242,6 +252,16 @@ public class ArchitectureModelResourceVisitor implements ResourceClient {
 	private String getFieldDeclarationString(FieldDeclaration field) {		
 		String fieldNameString = "";
 		fieldNameString += field.getType() + " ";
+        List<VariableDeclarationFragment> fragments = field.fragments();
+        if (fragments.size() == 1) {
+            VariableDeclarationFragment frag = fragments.get(0);
+            fieldNameString += frag.getName().getFullyQualifiedName();
+        }
+		return fieldNameString; 		
+	}
+	
+	private String getFieldName(FieldDeclaration field) {		
+		String fieldNameString = "";
         List<VariableDeclarationFragment> fragments = field.fragments();
         if (fragments.size() == 1) {
             VariableDeclarationFragment frag = fragments.get(0);

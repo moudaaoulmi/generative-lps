@@ -829,13 +829,22 @@ public interface ArchitecturePackage extends EPackage {
 	int ARCHITECTURE_METHOD__REVERSE_DEPENDENCES = ARCHITECTURE_ENTITY__REVERSE_DEPENDENCES;
 
 	/**
+	 * The feature id for the '<em><b>Method Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE_METHOD__METHOD_DECLARATION = ARCHITECTURE_ENTITY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_METHOD_FEATURE_COUNT = ARCHITECTURE_ENTITY_FEATURE_COUNT + 0;
+	int ARCHITECTURE_METHOD_FEATURE_COUNT = ARCHITECTURE_ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link br.pucrio.inf.les.genarch.models.architecture.impl.ArchitectureAttributeImpl <em>Attribute</em>}' class.
@@ -884,13 +893,22 @@ public interface ArchitecturePackage extends EPackage {
 	int ARCHITECTURE_ATTRIBUTE__REVERSE_DEPENDENCES = ARCHITECTURE_ENTITY__REVERSE_DEPENDENCES;
 
 	/**
+	 * The feature id for the '<em><b>Attribut Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE_ATTRIBUTE__ATTRIBUT_DECLARATION = ARCHITECTURE_ENTITY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ATTRIBUTE_FEATURE_COUNT = ARCHITECTURE_ENTITY_FEATURE_COUNT + 0;
+	int ARCHITECTURE_ATTRIBUTE_FEATURE_COUNT = ARCHITECTURE_ENTITY_FEATURE_COUNT + 1;
 
 
 	/**
@@ -1321,6 +1339,17 @@ public interface ArchitecturePackage extends EPackage {
 	EClass getArchitectureMethod();
 
 	/**
+	 * Returns the meta object for the attribute '{@link br.pucrio.inf.les.genarch.models.architecture.ArchitectureMethod#getMethodDeclaration <em>Method Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method Declaration</em>'.
+	 * @see br.pucrio.inf.les.genarch.models.architecture.ArchitectureMethod#getMethodDeclaration()
+	 * @see #getArchitectureMethod()
+	 * @generated
+	 */
+	EAttribute getArchitectureMethod_MethodDeclaration();
+
+	/**
 	 * Returns the meta object for class '{@link br.pucrio.inf.les.genarch.models.architecture.ArchitectureAttribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1329,6 +1358,17 @@ public interface ArchitecturePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getArchitectureAttribute();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.pucrio.inf.les.genarch.models.architecture.ArchitectureAttribute#getAttributDeclaration <em>Attribut Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribut Declaration</em>'.
+	 * @see br.pucrio.inf.les.genarch.models.architecture.ArchitectureAttribute#getAttributDeclaration()
+	 * @see #getArchitectureAttribute()
+	 * @generated
+	 */
+	EAttribute getArchitectureAttribute_AttributDeclaration();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1699,6 +1739,14 @@ public interface ArchitecturePackage extends EPackage {
 		EClass ARCHITECTURE_METHOD = eINSTANCE.getArchitectureMethod();
 
 		/**
+		 * The meta object literal for the '<em><b>Method Declaration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARCHITECTURE_METHOD__METHOD_DECLARATION = eINSTANCE.getArchitectureMethod_MethodDeclaration();
+
+		/**
 		 * The meta object literal for the '{@link br.pucrio.inf.les.genarch.models.architecture.impl.ArchitectureAttributeImpl <em>Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1707,6 +1755,14 @@ public interface ArchitecturePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ARCHITECTURE_ATTRIBUTE = eINSTANCE.getArchitectureAttribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribut Declaration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARCHITECTURE_ATTRIBUTE__ATTRIBUT_DECLARATION = eINSTANCE.getArchitectureAttribute_AttributDeclaration();
 
 	}
 

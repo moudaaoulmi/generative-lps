@@ -437,13 +437,31 @@ public interface ConfigurationPackage extends EPackage {
 	int CONFIGURATION_CLASS__FEATURE_EXPRESSION = MAPPING_ENTITY__FEATURE_EXPRESSION;
 
 	/**
+	 * The feature id for the '<em><b>Methods</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_CLASS__METHODS = MAPPING_ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_CLASS__FIELDS = MAPPING_ENTITY_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Class</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIGURATION_CLASS_FEATURE_COUNT = MAPPING_ENTITY_FEATURE_COUNT + 0;
+	int CONFIGURATION_CLASS_FEATURE_COUNT = MAPPING_ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationAspectImpl <em>Aspect</em>}' class.
@@ -584,6 +602,61 @@ public interface ConfigurationPackage extends EPackage {
 	int CONFIGURATION_FILE_FEATURE_COUNT = MAPPING_ENTITY_FEATURE_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationFieldImpl <em>Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationFieldImpl
+	 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationPackageImpl#getConfigurationField()
+	 * @generated
+	 */
+	int CONFIGURATION_FIELD = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_FIELD__NAME = MAPPING_ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_FIELD__PATH = MAPPING_ENTITY__PATH;
+
+	/**
+	 * The feature id for the '<em><b>Feature Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_FIELD__FEATURE_EXPRESSION = MAPPING_ENTITY__FEATURE_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Field Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_FIELD__FIELD_DECLARATION = MAPPING_ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_FIELD_FEATURE_COUNT = MAPPING_ENTITY_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationFolderImpl <em>Folder</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -591,7 +664,7 @@ public interface ConfigurationPackage extends EPackage {
 	 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationPackageImpl#getConfigurationFolder()
 	 * @generated
 	 */
-	int CONFIGURATION_FOLDER = 11;
+	int CONFIGURATION_FOLDER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -664,7 +737,7 @@ public interface ConfigurationPackage extends EPackage {
 	 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationPackageImpl#getConfigurationFragment()
 	 * @generated
 	 */
-	int CONFIGURATION_FRAGMENT = 12;
+	int CONFIGURATION_FRAGMENT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -710,7 +783,7 @@ public interface ConfigurationPackage extends EPackage {
 	 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationPackageImpl#getFeatureExpression()
 	 * @generated
 	 */
-	int FEATURE_EXPRESSION = 13;
+	int FEATURE_EXPRESSION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -729,6 +802,61 @@ public interface ConfigurationPackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_EXPRESSION_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationMethodImpl <em>Method</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationMethodImpl
+	 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationPackageImpl#getConfigurationMethod()
+	 * @generated
+	 */
+	int CONFIGURATION_METHOD = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_METHOD__NAME = MAPPING_ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_METHOD__PATH = MAPPING_ENTITY__PATH;
+
+	/**
+	 * The feature id for the '<em><b>Feature Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_METHOD__FEATURE_EXPRESSION = MAPPING_ENTITY__FEATURE_EXPRESSION;
+
+	/**
+	 * The feature id for the '<em><b>Method Declaration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_METHOD__METHOD_DECLARATION = MAPPING_ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURATION_METHOD_FEATURE_COUNT = MAPPING_ENTITY_FEATURE_COUNT + 1;
 
 
 	/**
@@ -1032,6 +1160,28 @@ public interface ConfigurationPackage extends EPackage {
 	EClass getConfigurationClass();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link br.pucrio.inf.les.genarch.models.configuration.ConfigurationClass#getMethods <em>Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Methods</em>'.
+	 * @see br.pucrio.inf.les.genarch.models.configuration.ConfigurationClass#getMethods()
+	 * @see #getConfigurationClass()
+	 * @generated
+	 */
+	EReference getConfigurationClass_Methods();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link br.pucrio.inf.les.genarch.models.configuration.ConfigurationClass#getFields <em>Fields</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Fields</em>'.
+	 * @see br.pucrio.inf.les.genarch.models.configuration.ConfigurationClass#getFields()
+	 * @see #getConfigurationClass()
+	 * @generated
+	 */
+	EReference getConfigurationClass_Fields();
+
+	/**
 	 * Returns the meta object for class '{@link br.pucrio.inf.les.genarch.models.configuration.ConfigurationAspect <em>Aspect</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1060,6 +1210,27 @@ public interface ConfigurationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getConfigurationFile();
+
+	/**
+	 * Returns the meta object for class '{@link br.pucrio.inf.les.genarch.models.configuration.ConfigurationField <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Field</em>'.
+	 * @see br.pucrio.inf.les.genarch.models.configuration.ConfigurationField
+	 * @generated
+	 */
+	EClass getConfigurationField();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.pucrio.inf.les.genarch.models.configuration.ConfigurationField#getFieldDeclaration <em>Field Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Field Declaration</em>'.
+	 * @see br.pucrio.inf.les.genarch.models.configuration.ConfigurationField#getFieldDeclaration()
+	 * @see #getConfigurationField()
+	 * @generated
+	 */
+	EAttribute getConfigurationField_FieldDeclaration();
 
 	/**
 	 * Returns the meta object for class '{@link br.pucrio.inf.les.genarch.models.configuration.ConfigurationFolder <em>Folder</em>}'.
@@ -1134,6 +1305,27 @@ public interface ConfigurationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFeatureExpression_Expression();
+
+	/**
+	 * Returns the meta object for class '{@link br.pucrio.inf.les.genarch.models.configuration.ConfigurationMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Method</em>'.
+	 * @see br.pucrio.inf.les.genarch.models.configuration.ConfigurationMethod
+	 * @generated
+	 */
+	EClass getConfigurationMethod();
+
+	/**
+	 * Returns the meta object for the attribute '{@link br.pucrio.inf.les.genarch.models.configuration.ConfigurationMethod#getMethodDeclaration <em>Method Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method Declaration</em>'.
+	 * @see br.pucrio.inf.les.genarch.models.configuration.ConfigurationMethod#getMethodDeclaration()
+	 * @see #getConfigurationMethod()
+	 * @generated
+	 */
+	EAttribute getConfigurationMethod_MethodDeclaration();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1398,6 +1590,22 @@ public interface ConfigurationPackage extends EPackage {
 		EClass CONFIGURATION_CLASS = eINSTANCE.getConfigurationClass();
 
 		/**
+		 * The meta object literal for the '<em><b>Methods</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONFIGURATION_CLASS__METHODS = eINSTANCE.getConfigurationClass_Methods();
+
+		/**
+		 * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONFIGURATION_CLASS__FIELDS = eINSTANCE.getConfigurationClass_Fields();
+
+		/**
 		 * The meta object literal for the '{@link br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationAspectImpl <em>Aspect</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1426,6 +1634,24 @@ public interface ConfigurationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONFIGURATION_FILE = eINSTANCE.getConfigurationFile();
+
+		/**
+		 * The meta object literal for the '{@link br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationFieldImpl <em>Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationFieldImpl
+		 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationPackageImpl#getConfigurationField()
+		 * @generated
+		 */
+		EClass CONFIGURATION_FIELD = eINSTANCE.getConfigurationField();
+
+		/**
+		 * The meta object literal for the '<em><b>Field Declaration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONFIGURATION_FIELD__FIELD_DECLARATION = eINSTANCE.getConfigurationField_FieldDeclaration();
 
 		/**
 		 * The meta object literal for the '{@link br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationFolderImpl <em>Folder</em>}' class.
@@ -1488,6 +1714,24 @@ public interface ConfigurationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FEATURE_EXPRESSION__EXPRESSION = eINSTANCE.getFeatureExpression_Expression();
+
+		/**
+		 * The meta object literal for the '{@link br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationMethodImpl <em>Method</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationMethodImpl
+		 * @see br.pucrio.inf.les.genarch.models.configuration.impl.ConfigurationPackageImpl#getConfigurationMethod()
+		 * @generated
+		 */
+		EClass CONFIGURATION_METHOD = eINSTANCE.getConfigurationMethod();
+
+		/**
+		 * The meta object literal for the '<em><b>Method Declaration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONFIGURATION_METHOD__METHOD_DECLARATION = eINSTANCE.getConfigurationMethod_MethodDeclaration();
 
 	}
 

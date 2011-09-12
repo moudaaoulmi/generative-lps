@@ -13,26 +13,30 @@
       disposableProviderFactory="true" ecorePackage="ConfigurationMetaModel.ecore#/">
     <genClasses ecoreClass="ConfigurationMetaModel.ecore#//Configuration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//Configuration/mappingRelationships"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//Configuration/crosscuttingRelationships"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//Configuration/joinpointRelationships"/>
-    </genClasses>
-    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//MappingOfJoinpointFeatures">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingOfJoinpointFeatures/joinpointFeatures"/>
     </genClasses>
     <genClasses ecoreClass="ConfigurationMetaModel.ecore#//MappingRelationships">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingRelationships/components"/>
-    </genClasses>
-    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ValidCrosscuttingRelationships">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ValidCrosscuttingRelationships/crosscuttingFeatures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingRelationships/containers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingRelationships/resourcesContainers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingRelationships/fragmentsContainer"/>
     </genClasses>
     <genClasses ecoreClass="ConfigurationMetaModel.ecore#//MappingEntity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//MappingEntity/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//MappingEntity/path"/>
-      <genFeatures property="Readonly" children="true" createChild="false" propertyCategory=""
-          propertyDescription="" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingEntity/featureConfiguration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingEntity/featureExpression"/>
     </genClasses>
-    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//FeatureConfiguration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//FeatureConfiguration/configuration"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//ConfigurationContainer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationContainer/components"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer/folders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer/files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer/templates"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationFragmentContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//ConfigurationFragmentContainer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationFragmentContainer/fragments"/>
     </genClasses>
     <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationComponent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationComponent/classes"/>
@@ -41,17 +45,23 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationComponent/files"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationComponent/subComponents"/>
     </genClasses>
-    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationClass"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationClass/Methods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationClass/Fields"/>
+    </genClasses>
     <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationAspect"/>
     <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationTemplate"/>
     <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationFile"/>
-    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//CrosscuttingFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//CrosscuttingFeature/name"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//CrosscuttingFeature/joinpointFeature"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationField"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationFolder">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationFolder/subFolders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationFolder/files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationFolder/templates"/>
     </genClasses>
-    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//JoinpointFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//JoinpointFeature/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//JoinpointFeature/joinpointSpecification"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationFragment"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//FeatureExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//FeatureExpression/expression"/>
     </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationMethod"/>
   </genPackages>
 </genmodel:GenModel>

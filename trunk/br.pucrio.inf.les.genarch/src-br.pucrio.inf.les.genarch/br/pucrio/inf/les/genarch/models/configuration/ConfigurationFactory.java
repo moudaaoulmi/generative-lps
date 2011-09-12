@@ -125,6 +125,15 @@ public interface ConfigurationFactory extends EFactory {
 	ConfigurationFile createConfigurationFile();
 
 	/**
+	 * Returns a new object of class '<em>Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Field</em>'.
+	 * @generated
+	 */
+	ConfigurationField createConfigurationField();
+
+	/**
 	 * Returns a new object of class '<em>Folder</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,6 +159,15 @@ public interface ConfigurationFactory extends EFactory {
 	 * @generated
 	 */
 	FeatureExpression createFeatureExpression();
+
+	/**
+	 * Returns a new object of class '<em>Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Method</em>'.
+	 * @generated
+	 */
+	ConfigurationMethod createConfigurationMethod();
 
 	/**
 	 * Returns the package supported by this factory.

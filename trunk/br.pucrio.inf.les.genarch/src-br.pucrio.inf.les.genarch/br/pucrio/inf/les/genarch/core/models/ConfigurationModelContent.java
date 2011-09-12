@@ -6,13 +6,17 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 
+import br.pucrio.inf.les.genarch.models.architecture.ArchitectureAttribute;
+import br.pucrio.inf.les.genarch.models.architecture.ArchitectureClass;
 import br.pucrio.inf.les.genarch.models.configuration.Configuration;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationAspect;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationClass;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationComponent;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationContainer;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationFactory;
+import br.pucrio.inf.les.genarch.models.configuration.ConfigurationField;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationFile;
+import br.pucrio.inf.les.genarch.models.configuration.ConfigurationMethod;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationPackage;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationResourcesContainer;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationTemplate;
@@ -101,8 +105,8 @@ public class ConfigurationModelContent {
 		return configurationComponent;
 	}
 
-	public void addClass(String name,String path,String featureConfiguration,String componentPath) {
-		if ( containsMappingEntity(path) ) return;	
+	public boolean addClass(String name,String path,String featureConfiguration,String componentPath) {
+		if ( containsMappingEntity(path) ) return false;	
 		ConfigurationClass clazz = this.configurationFactory.createConfigurationClass();
 		FeatureExpression feature = configurationFactory.createFeatureExpression();
 		feature.setExpression(featureConfiguration);
@@ -111,13 +115,37 @@ public class ConfigurationModelContent {
 		clazz.setFeatureExpression(feature);
 
 		ConfigurationComponent configurationComponent = this.getComponent(componentPath);
-
 		if ( configurationComponent == null ) {
 			configurationComponent = this.addComponent(componentPath);
 		}
 
 		configurationComponent.getClasses().add(clazz);
+		return true;
 	}
+	
+	 public void addField(String name,String fieldDeclaration, String path, ConfigurationClass configurationClass, String featureConfiguration) {
+		 FeatureExpression feature = configurationFactory.createFeatureExpression();
+		 feature.setExpression(featureConfiguration);
+		 ConfigurationField configurationField = this.configurationFactory.createConfigurationField();
+		 configurationField.setName(name);
+		 configurationField.setPath(path);
+		 configurationField.setFeatureExpression(feature);
+		 configurationField.setFieldDeclaration(fieldDeclaration);
+		 configurationClass.getFields().add(configurationField);
+	 }
+	 
+	 public void addMethod(String name,String methodDeclaration, String path, ConfigurationClass configurationClass, String featureConfiguration) {
+		 FeatureExpression feature = configurationFactory.createFeatureExpression();
+		 feature.setExpression(featureConfiguration);
+		 ConfigurationMethod configurationMethod = this.configurationFactory.createConfigurationMethod();
+		 configurationMethod.setName(name);
+		 configurationMethod.setPath(path);
+		 configurationMethod.setFeatureExpression(feature);
+		 configurationMethod.setMethodDeclaration(methodDeclaration);
+		 configurationClass.getMethods().add(configurationMethod);
+	 }
+	 
+	 
 
 	public void addAspect(String name,String path,String featureConfiguration,String componentPath) {
 		if ( containsMappingEntity(path) ) return;

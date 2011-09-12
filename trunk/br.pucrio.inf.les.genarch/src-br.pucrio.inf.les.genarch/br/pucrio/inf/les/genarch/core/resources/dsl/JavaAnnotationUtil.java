@@ -301,7 +301,6 @@ public class JavaAnnotationUtil {
 	public static List<FeatureItem> featureAnnotations(IFile annotedFile) {
 
 		if ( annotedFile == null) return null;
-		System.out.println("***********Passou1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		List<FeatureItem> annotations = new ArrayList<FeatureItem>();
 		ICompilationUnit compilationUnit = JavaCore.createCompilationUnitFrom(annotedFile);
 
@@ -367,6 +366,64 @@ public class JavaAnnotationUtil {
 
 		return annotations;
 	}
+	
+	public static List<FeatureItem> featureSpecificsAnnotations(IFile annotedFile, Class clazz) {
+
+		if ( annotedFile == null) return null;
+		List<FeatureItem> annotations = new ArrayList<FeatureItem>();
+		ICompilationUnit compilationUnit = JavaCore.createCompilationUnitFrom(annotedFile);
+
+		ASTParser astParser = ASTParser.newParser(AST.JLS3);
+		astParser.setSource(compilationUnit);
+		astParser.setKind(ASTParser.K_COMPILATION_UNIT);			
+		astParser.setResolveBindings(true);
+		ASTNode rootNode = astParser.createAST(new NullProgressMonitor());
+		//AnnotationAspectVisitor visitor = new AnnotationAspectVisitor();
+		AnnotationClassVisitor visitor = new AnnotationClassVisitor();
+		rootNode.accept(visitor);
+
+		for ( NormalAnnotation annotation : visitor.getNormalAnnotations() ) {
+			if(annotation.getParent().getClass().equals(org.eclipse.jdt.core.dom.ArrayInitializer.class)){
+				if(!annotation.getParent().getParent().getParent().getClass().equals(clazz)) continue;
+			}else
+			if(!annotation.getParent().getClass().equals(clazz)) continue;
+				
+			IAnnotationBinding binding = annotation.resolveAnnotationBinding();
+			
+
+			if ( binding == null ) {
+				continue;
+			}
+			
+			for(IAnnotationBinding ant : binding.getAnnotations()){
+				ant.getAnnotationType();
+				ant.getClass();
+			}
+
+			if ( binding.getName().equals("Feature") ) {
+				IMemberValuePairBinding[] membersValuePairBinding = binding.getDeclaredMemberValuePairs();
+				FeatureItem featuresItem = new FeatureItem();
+				for ( IMemberValuePairBinding memberValuePairBinding : membersValuePairBinding ) {		
+					
+					String name = memberValuePairBinding.getName();
+					Object value = memberValuePairBinding.getValue();
+					if ( "name".equals(name) ) {
+						featuresItem.setName((String)value);
+					} else if ( "type".equals(name) ) {
+						IBinding variableBinding = (IBinding)value;									
+						FeatureType featureType = FeatureType.valueOf(new String(variableBinding.getName()));
+						featuresItem.setType(featureType);
+					} else if ( "parent".equals(name) ) {
+						featuresItem.setParent((String)value);
+					}															
+				}
+				annotations.add(featuresItem);
+			} 
+		}
+
+		return annotations;
+	}
+	
 
 	private static FeatureItem makeFeatureItem(Annotation annotation) {
 		FeatureItem featureItem = new FeatureItem();

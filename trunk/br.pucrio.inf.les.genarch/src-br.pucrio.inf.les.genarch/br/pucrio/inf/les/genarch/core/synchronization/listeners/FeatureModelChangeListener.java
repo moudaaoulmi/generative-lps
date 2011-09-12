@@ -13,7 +13,7 @@ import br.pucrio.inf.les.genarch.core.fmp.FMPChange;
 public class FeatureModelChangeListener implements IResourceChangeListener {
 
 	public void resourceChanged(IResourceChangeEvent event) {
-
+		System.out.println("***********************************************************");
 		try {
 			ResourceChangedDeltaVisitor deltaVisitor = new ResourceChangedDeltaVisitor();
 			event.getDelta().accept(deltaVisitor);

@@ -28,7 +28,6 @@ public class ArchitectureModelContent {
     
     public ArchitectureModelContent() {				
 	init();
-	System.out.println("*********** Passou4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 	this.architecture = this.architectureFactory.createArchitecture();	
     }
 
@@ -80,10 +79,11 @@ public class ArchitectureModelContent {
 	architectureComponent.getClasses().add(architectureClass);
     }
     
-    public void addMethod(String name,String path,ArchitectureClass architectureClass) {
+    public void addMethod(String name,String declaration, String path, ArchitectureClass architectureClass) {
     	ArchitectureMethod architectureMethod = this.architectureFactory.createArchitectureMethod();
     	architectureMethod.setName(name);
     	architectureMethod.setPath(path);
+    	architectureMethod.setMethodDeclaration(declaration);
     	architectureClass.getMethodRef().add(architectureMethod);
     }
     
@@ -95,10 +95,11 @@ public class ArchitectureModelContent {
     	architectureMethod.getReverseDependences().add(entity);
     }
     
-    public void addAttribute(String name,String path,ArchitectureClass architectureClass) {
+    public void addAttribute(String name,String declaration, String path,ArchitectureClass architectureClass) {
     	ArchitectureAttribute ArchitectureClass = this.architectureFactory.createArchitectureAttribute();
     	ArchitectureClass.setName(name);
     	ArchitectureClass.setPath(path);
+    	ArchitectureClass.setAttributDeclaration(declaration);
     	architectureClass.getAttributeRef().add(ArchitectureClass);
     }
 

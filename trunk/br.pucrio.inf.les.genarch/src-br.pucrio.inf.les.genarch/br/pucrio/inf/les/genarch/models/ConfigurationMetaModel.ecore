@@ -12,12 +12,14 @@
         eType="#//ConfigurationContainer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resourcesContainers" upperBound="-1"
         eType="#//ConfigurationResourcesContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fragmentsContainer" upperBound="-1"
+        eType="#//ConfigurationFragmentContainer" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MappingEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="featureExpression" eType="#//FeatureExpression"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featureExpression" lowerBound="1"
+        eType="#//FeatureExpression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConfigurationContainer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -33,6 +35,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="templates" upperBound="-1"
         eType="#//ConfigurationTemplate" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationFragmentContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fragments" upperBound="-1"
+        eType="#//ConfigurationFragment" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConfigurationComponent" eSuperTypes="#//MappingEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="classes" upperBound="-1"
         eType="#//ConfigurationClass" containment="true"/>
@@ -45,10 +53,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="subComponents" upperBound="-1"
         eType="#//ConfigurationComponent" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationClass" eSuperTypes="#//MappingEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationClass" eSuperTypes="#//MappingEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Methods" upperBound="-1"
+        eType="#//ConfigurationMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Fields" upperBound="-1"
+        eType="#//ConfigurationField" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConfigurationAspect" eSuperTypes="#//MappingEntity"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConfigurationTemplate" eSuperTypes="#//MappingEntity"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConfigurationFile" eSuperTypes="#//MappingEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationField" eSuperTypes="#//MappingEntity"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConfigurationFolder" eSuperTypes="#//MappingEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subFolders" upperBound="-1"
         eType="#//ConfigurationFolder" containment="true"/>
@@ -57,7 +71,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="templates" upperBound="-1"
         eType="#//ConfigurationTemplate" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationFragment" eSuperTypes="#//MappingEntity"/>
   <eClassifiers xsi:type="ecore:EClass" name="FeatureExpression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationMethod" eSuperTypes="#//MappingEntity"/>
 </ecore:EPackage>

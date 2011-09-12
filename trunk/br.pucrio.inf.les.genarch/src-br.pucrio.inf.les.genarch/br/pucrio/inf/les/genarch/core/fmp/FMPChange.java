@@ -64,6 +64,7 @@ public class FMPChange {
 	private IProject project;
 
 	public void change(IProject project) {
+		System.out.println("***********************************************************");
 
 		this.project = project;
 
