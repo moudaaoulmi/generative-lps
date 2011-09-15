@@ -1,0 +1,26 @@
+package br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata;
+
+public class AbstractData {
+	String name;
+	String path;
+	
+	
+	public AbstractData(String name, String path) {
+		this.name = name;
+		this.path = path;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
+	
+
+}
