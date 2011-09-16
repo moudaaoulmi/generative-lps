@@ -52,7 +52,6 @@ Require-Bundle: ca.uwaterloo.gp.fmp,
  org.openarchitectureware.emftools,
  org.antlr.runtime,
  org.eclipse.ltk.core.refactoring,
- net.sf.eclipsecs.checkstyle,
  org.junit
 Eclipse-LazyStart: true
 Bundle-Activator: br.pucrio.inf.les.genarch.GenarchPlugin
@@ -100,5 +99,4 @@ Export-Package: br.pucrio.inf.les.genarch,
  br.pucrio.inf.les.genarch.ui.actions,
  br.pucrio.inf.les.genarch.ui.editor,
  br.pucrio.inf.les.genarch.ui.wizards
-Import-Package: br.pucrio.inf.les.genarch,
- com.puppycrawl.tools.checkstyle
+Import-Package: br.pucrio.inf.les.genarch
