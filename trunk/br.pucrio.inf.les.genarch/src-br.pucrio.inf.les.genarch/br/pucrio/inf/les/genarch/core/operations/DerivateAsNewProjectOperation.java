@@ -24,26 +24,32 @@ import br.pucrio.inf.les.genarch.GenarchEMFPlugin;
 import br.pucrio.inf.les.genarch.core.logic.Logic;
 import br.pucrio.inf.les.genarch.core.project.GenarchProjectConfigurationFile;
 import br.pucrio.inf.les.genarch.core.resources.dsl.AspectAnnotationUtil;
+import br.pucrio.inf.les.genarch.core.resources.dsl.JDTASTUtil;
 import br.pucrio.inf.les.genarch.core.resources.dsl.JavaAnnotationUtil;
 import br.pucrio.inf.les.genarch.core.templates.GenerateXPandTemplates;
 import br.pucrio.inf.les.genarch.models.architecture.Architecture;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureAspect;
+import br.pucrio.inf.les.genarch.models.architecture.ArchitectureAttribute;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureClass;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureComponent;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureContainer;
+import br.pucrio.inf.les.genarch.models.architecture.ArchitectureEntity;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureFile;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureFolder;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureFragment;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureFragmentContainer;
+import br.pucrio.inf.les.genarch.models.architecture.ArchitectureMethod;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureResourcesContainer;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureTemplate;
 import br.pucrio.inf.les.genarch.models.configuration.Configuration;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationAspect;
+import br.pucrio.inf.les.genarch.models.configuration.ConfigurationField;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationClass;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationComponent;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationFile;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationFolder;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationFragment;
+import br.pucrio.inf.les.genarch.models.configuration.ConfigurationMethod;
 import br.pucrio.inf.les.genarch.models.configuration.ConfigurationTemplate;
 import br.pucrio.inf.les.genarch.models.configuration.MappingEntity;
 import br.pucrio.inf.les.genarch.models.configuration.MappingRelationships;
@@ -567,15 +573,14 @@ public class DerivateAsNewProjectOperation {
 	 */
 	private br.pucrio.inf.les.genarch.models.instance.ArchitectureComponent createComponent(ArchitectureComponent component,ArchitectureInstance architectureInstance,br.pucrio.inf.les.genarch.models.instance.Feature featureConfiguration) {		
 		IFolder newFolder = buildFolder(component.getPath());//Cria o caminho de diretórios ate o componente
-
+		
 		//Cria uma instância do componente
 		br.pucrio.inf.les.genarch.models.instance.ArchitectureComponent componentInstance = instanceFactory.createArchitectureComponent();
 		componentInstance.setName(component.getName());
 		componentInstance.setPath(component.getPath());
 
 		//Trata classes Java
-		EList classes = component.getClasses();
-		
+		EList classes = component.getClasses();		
 
 		for ( int classesCount = 0; classesCount < classes.size(); classesCount++ ) {
 			ArchitectureClass clazz = (ArchitectureClass)classes.get(classesCount);
@@ -586,33 +591,13 @@ public class DerivateAsNewProjectOperation {
 			if ( configurationClass != null ) {
 				//verifica se a classe foi marcada selecioanda ou não na configuração das features do produto.
 				boolean status = this.evalFeatureConfiguration(configurationClass,featureConfiguration);
-				if (status) {//Cria duas instancias da classe 				
-					br.pucrio.inf.les.genarch.models.instance.ArchitectureClass classInstanceOne = instanceFactory.createArchitectureClass();
-					classInstanceOne.setName(clazz.getName());
-					classInstanceOne.setPath(clazz.getPath());
-
-					br.pucrio.inf.les.genarch.models.instance.ArchitectureClass classInstanceTwo = instanceFactory.createArchitectureClass();
-					classInstanceTwo.setName(clazz.getName());
-					classInstanceTwo.setPath(clazz.getPath());
-
-					componentInstance.getClasses().add(classInstanceOne);
-					architectureInstance.getClasses().add(classInstanceTwo);//Adiciona a classe no modelo de arquitetura do protudo.
-
-					copyEntity(clazz);//Copia a entidade para o novo produto.
+				if (status) {//Cria duas instancias da classe 	
+					// [Demóstenes] Refactor to create this method.
+					processInstanceClass(architectureInstance, featureConfiguration, componentInstance, clazz);
 				}		
 			} else {//Se é uma classe normal apenas inclui
-				br.pucrio.inf.les.genarch.models.instance.ArchitectureClass classInstanceOne = instanceFactory.createArchitectureClass();
-				classInstanceOne.setName(clazz.getName());
-				classInstanceOne.setPath(clazz.getPath());
-
-				br.pucrio.inf.les.genarch.models.instance.ArchitectureClass classInstanceTwo = instanceFactory.createArchitectureClass();
-				classInstanceTwo.setName(clazz.getName());
-				classInstanceTwo.setPath(clazz.getPath());
-
-				componentInstance.getClasses().add(classInstanceOne);
-				architectureInstance.getClasses().add(classInstanceTwo);
-
-				copyEntity(clazz);
+				// [Demóstenes] Refactor to create this method.
+				processInstanceClass(architectureInstance, featureConfiguration, componentInstance, clazz);
 			}
 		}
 
@@ -738,7 +723,7 @@ public class DerivateAsNewProjectOperation {
 			}
 		}
 		
-		//??
+		// [Demóstenes] Update architectureInstance with componentInstance.
 		if ( componentInstance.eAllContents().hasNext() ) {
 			architectureInstance.getComponents().add(componentInstance);
 		}
@@ -754,6 +739,119 @@ public class DerivateAsNewProjectOperation {
 		}
 
 		return componentInstance;
+	}
+
+	/**
+	 * @param architectureInstance
+	 * @param featureConfiguration
+	 * @param componentInstance
+	 * @param clazz
+	 */
+	private void processInstanceClass(
+			ArchitectureInstance architectureInstance,
+			br.pucrio.inf.les.genarch.models.instance.Feature featureConfiguration,
+			br.pucrio.inf.les.genarch.models.instance.ArchitectureComponent componentInstance,
+			ArchitectureClass clazz) {
+		
+		//[Demóstenes] - Added method, that returns classInstanceOne					
+		br.pucrio.inf.les.genarch.models.instance.ArchitectureClass classInstanceOne = createClass(clazz, architectureInstance, featureConfiguration);
+		
+		classInstanceOne.setName(clazz.getName());
+		classInstanceOne.setPath(clazz.getPath());
+
+		// [Demóstenes] - Added method, that returns a copy of classInstanceOne.
+		br.pucrio.inf.les.genarch.models.instance.ArchitectureClass classInstanceTwo = instanceFactory.createArchitectureClass();
+		
+		classInstanceTwo.setName(clazz.getName());
+		classInstanceTwo.setPath(clazz.getPath());
+
+		componentInstance.getClasses().add(classInstanceOne);
+		architectureInstance.getClasses().add(classInstanceTwo);//Adiciona a classe no modelo de arquitetura do protudo.
+		
+		copyEntity(clazz);//Copia a entidade para o novo produto.
+	}
+
+	private br.pucrio.inf.les.genarch.models.instance.ArchitectureClass createClass(
+			ArchitectureClass clazz,
+			ArchitectureInstance architectureInstance,
+			br.pucrio.inf.les.genarch.models.instance.Feature featureConfiguration) {
+
+		// [Demóstenes] - Analize all attributes and methods in class.  
+
+		// [Demóstenes] make an instance of class.
+		br.pucrio.inf.les.genarch.models.instance.ArchitectureClass classInstance = instanceFactory.createArchitectureClass();
+		classInstance.setName(clazz.getName());
+		classInstance.setPath(clazz.getPath());
+		
+		// [Demóstenes] Analyzing attributes.
+		EList attributes = clazz.getAttributeRef();
+
+		for ( int attributesCount = 0; attributesCount < attributes.size(); attributesCount++ ) {
+			ArchitectureAttribute attribute = (ArchitectureAttribute)attributes.get(attributesCount);
+			
+			//Encontra o componente de mapeamento para a classe
+			ConfigurationField configurationAttribute = (ConfigurationField)this.findConfigurationElementByPath(attribute.getPath());
+
+			//Se for  um atributo anotado.
+			if ( configurationAttribute != null ) {
+				//verifica se o método marcado foi selecionado ou não na configuração das features do produto.
+				boolean status = this.evalFeatureConfiguration(configurationAttribute,featureConfiguration);
+				if (!status) { 	
+					//[Demóstenes] Remove the attribute declaration in your class.					
+					removeContentClass(clazz, attribute);					
+				}		
+			}
+		}		
+		
+		// [Demóstenes] Analyzing methods.
+		EList methods = clazz.getMethodRef();
+
+		for ( int methodsCount = 0; methodsCount < methods.size(); methodsCount++ ) {
+			ArchitectureMethod method = (ArchitectureMethod)methods.get(methodsCount);				
+			ConfigurationMethod configurationMethod = (ConfigurationMethod)this.findConfigurationElementByPath(method.getPath());
+		
+			if ( configurationMethod != null ) {
+				boolean status = this.evalFeatureConfiguration(configurationMethod,featureConfiguration);
+				if (!status) {
+					//[Demóstenes] Remove the method declaration in your class.
+					removeContentClass(clazz, method);
+				}		
+			}
+		}
+
+		return classInstance;
+	}
+
+	// [Demóstenes] Remove atttribute or method declaration of class. 
+	private void removeContentClass(ArchitectureClass clazz, ArchitectureEntity content) {
+		monitor.subTask("Update File \"" + clazz.getPath() + "\"");
+
+		String filePath = clazz.getPath();
+		System.out.println(filePath);
+
+		IResource entityResource = this.project.findMember(filePath);
+
+		IPath instProjectPath = this.newProductProject.getFullPath();
+		IPath resourcePath = entityResource.getProjectRelativePath();
+
+		try {
+			entityResource.copy(instProjectPath.append(resourcePath), true, null);
+		} catch (CoreException e) {
+			e.printStackTrace();
+			GenarchEMFPlugin.INSTANCE.log(e);
+		}
+
+		if ( entityResource instanceof IFile ) {
+			IFile newEntityFile = newProductProject.getFile(clazz.getPath());
+			
+			if ( "java".equals(newEntityFile.getFileExtension()) ) {
+				//[Demóstenes] - Remove content member in newEntityFile.
+				JDTASTUtil.removeContent(newEntityFile, content.getName());	
+				
+			}			
+		}
+
+		monitor.worked(1);				
 	}
 
 	/**
