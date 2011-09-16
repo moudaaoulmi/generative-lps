@@ -789,13 +789,13 @@ public class DerivateAsNewProjectOperation {
 		for ( int attributesCount = 0; attributesCount < attributes.size(); attributesCount++ ) {
 			ArchitectureAttribute attribute = (ArchitectureAttribute)attributes.get(attributesCount);
 			
-			//Encontra o componente de mapeamento para a classe
-			ConfigurationField configurationAttribute = (ConfigurationField)this.findConfigurationElementByPath(attribute.getPath());
+			//[Demóstenes] - Find element by path and declaration.
+			ConfigurationField configurationField = (ConfigurationField)this.findConfigurationElementByPathDecl(attribute.getPath(), attribute.getAttributDeclaration());
 
 			//Se for  um atributo anotado.
-			if ( configurationAttribute != null ) {
+			if ( configurationField != null ) {
 				//verifica se o método marcado foi selecionado ou não na configuração das features do produto.
-				boolean status = this.evalFeatureConfiguration(configurationAttribute,featureConfiguration);
+				boolean status = this.evalFeatureConfiguration(configurationField,featureConfiguration);
 				if (!status) { 	
 					//[Demóstenes] Remove the attribute declaration in your class.					
 					removeContentClass(clazz, attribute);					
@@ -808,7 +808,8 @@ public class DerivateAsNewProjectOperation {
 
 		for ( int methodsCount = 0; methodsCount < methods.size(); methodsCount++ ) {
 			ArchitectureMethod method = (ArchitectureMethod)methods.get(methodsCount);				
-			ConfigurationMethod configurationMethod = (ConfigurationMethod)this.findConfigurationElementByPath(method.getPath());
+			//[Demóstenes] - Find elemento by path and declaration.
+			ConfigurationMethod configurationMethod = (ConfigurationMethod)this.findConfigurationElementByPathDecl(method.getName(), method.getMethodDeclaration());
 		
 			if ( configurationMethod != null ) {
 				boolean status = this.evalFeatureConfiguration(configurationMethod,featureConfiguration);
@@ -820,6 +821,34 @@ public class DerivateAsNewProjectOperation {
 		}
 
 		return classInstance;
+	}
+
+	//[Demóstenes] Find element (fields and methods) by path and declaration.
+	private EObject findConfigurationElementByPathDecl(String path, String decl) {
+		TreeIterator configurationContents = mappingRelationships.eAllContents();
+
+		while ( configurationContents.hasNext() ) {
+			EObject o = (EObject)configurationContents.next();
+			if ( o instanceof MappingEntity ) {
+				MappingEntity entity = (MappingEntity)o;
+
+				if ( entity.getPath().equals(path)) {				
+					if (entity instanceof ConfigurationField){
+						ConfigurationField attribute = (ConfigurationField) entity;
+						if ( attribute.getFieldDeclaration().equals(decl)) {
+							return attribute;
+						}
+					} else if(entity instanceof ConfigurationMethod){
+						ConfigurationMethod method = (ConfigurationMethod) entity;
+						if ( method.getMethodDeclaration().equals(decl)){
+							return method;
+						}
+					}
+				}
+			}
+		}
+
+		return null;
 	}
 
 	// [Demóstenes] Remove atttribute or method declaration of class. 
