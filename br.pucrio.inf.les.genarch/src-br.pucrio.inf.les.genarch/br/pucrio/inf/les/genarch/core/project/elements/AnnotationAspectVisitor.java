@@ -21,7 +21,6 @@ public class AnnotationAspectVisitor extends ASTVisitor {
 	private List<SingleMemberAnnotation> singleMemberAnnotations = null;
 
 	public AnnotationAspectVisitor() {
-		System.out.println("*********** Passou5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		this.markerAnnotations = new ArrayList<MarkerAnnotation>();
 		this.annotationsTypeDeclaration = new ArrayList<AnnotationTypeDeclaration>();
 		this.annotationsTypeMemberDeclaration = new ArrayList<AnnotationTypeMemberDeclaration>();
