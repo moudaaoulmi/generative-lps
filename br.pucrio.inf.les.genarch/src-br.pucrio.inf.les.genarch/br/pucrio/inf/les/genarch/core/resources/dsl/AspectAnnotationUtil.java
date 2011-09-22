@@ -184,7 +184,7 @@ public class AspectAnnotationUtil {
 	}
 
 	public static void removeFeaturesAnnotation(IFile file) {
-	/*	AJCompilationUnit ajCompilationUnit = AJCompilationUnitManager.INSTANCE.getAJCompilationUnit(file);
+		AJCompilationUnit ajCompilationUnit = AJCompilationUnitManager.INSTANCE.getAJCompilationUnit(file);
 		ASTNode astNode = AJDTASTUtil.astNode(file,ajCompilationUnit);
 		CompilationUnit unit = (CompilationUnit)astNode;
 		BodyDeclaration bodyDeclaration = AJDTASTUtil.bodyDeclaration(unit);
@@ -239,7 +239,6 @@ public class AspectAnnotationUtil {
 			e.printStackTrace();
 			GenarchEMFPlugin.INSTANCE.log(e);
 		}
-		*/
 	}
 
 	public static void removeAnnotation(BodyDeclaration bodyDeclaration, String annotationName) {
@@ -305,7 +304,7 @@ public class AspectAnnotationUtil {
 //
 //		List<FeatureItem> annotations = new ArrayList<FeatureItem>();
 //		AJCompilationUnit compilationUnit = AJCompilationUnitManager.INSTANCE.getAJCompilationUnit(annotedFile);
-		//ICompilationUnit compilationUnit = JavaCore.createCompilationUnitFrom(annotedFile);
+//		ICompilationUnit compilationUnit = JavaCore.createCompilationUnitFrom(annotedFile);
 
 //		ASTParser astParser = ASTParser.newParser(AST.JLS3);
 //		astParser.setSource(compilationUnit);
@@ -318,11 +317,11 @@ public class AspectAnnotationUtil {
 //		astParser.setKind(ASTParser.K_COMPILATION_UNIT);
 //		astParser.setResolveBindings(true);
 //		org.eclipse.jdt.core.dom.ASTNode rootNode = astParser.createAST(new NullProgressMonitor());
-//		
+		
 //		AnnotationAspectVisitor visitor = new AnnotationAspectVisitor();
-	//	AnnotationClassVisitor visitor = new AnnotationClassVisitor();
-//		rootNode.accept();
-
+//		AnnotationClassVisitor visitor = new AnnotationClassVisitor();
+//		rootNode.accept(visitor);
+//
 //		for ( NormalAnnotation annotation : visitor.getNormalAnnotations() ) {
 //			IAnnotationBinding binding = (IAnnotationBinding) annotation.resolveConstantExpressionValue();
 //
@@ -349,6 +348,7 @@ public class AspectAnnotationUtil {
 //				annotations.add(featuresItem);
 //			} 
 //		}
+//		return annotations;
 		return JavaAnnotationUtil.featureAnnotations(annotedFile);
 /*		List<FeatureItem> annotations = new ArrayList<FeatureItem>();					
 		AJCompilationUnit ajCompilationUnit = AJCompilationUnitManager.INSTANCE.getAJCompilationUnit(annotedFile);
