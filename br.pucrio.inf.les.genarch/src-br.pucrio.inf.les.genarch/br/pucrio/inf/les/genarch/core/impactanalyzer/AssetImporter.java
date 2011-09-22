@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
+import br.pucrio.inf.les.genarch.GenarchEMFPlugin;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.AnalysisAssetData;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.ClassData;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.FieldData;
@@ -30,33 +31,28 @@ import br.pucrio.inf.les.genarch.models.architecture.ArchitectureContainer;
 import br.pucrio.inf.les.genarch.models.architecture.ArchitectureMethod;
 
 public class AssetImporter {
-	private IProject project;
+	
 	private DesignWizard instancia;
 	private Architecture architecture;
 	private List<ArchitectureClass> architectureClass;
 	private AnalysisAssetData assetData = new AnalysisAssetData();
 
-	public AssetImporter(IProject project) throws IOException{
-		this.project = project;
-		architectureClass = new ArrayList<ArchitectureClass>();
-		mount();
-		iteracaoClasses();
-		importDependencies();				
+	public AssetImporter(String projectLocation, Architecture architecture){
+		try {
+			instancia =  new DesignWizard(projectLocation);
+		} catch (IOException ex) {
+			ex.printStackTrace();
+			GenarchEMFPlugin.INSTANCE.log(ex);
+		}		
+		this.architecture = architecture;
+		architectureClass = new ArrayList<ArchitectureClass>();				
 	}
 
-	private void mount() throws IOException  {		
-		instancia =  new DesignWizard(project.getLocation().toOSString());
+	public AnalysisAssetData extract() {		
 		
-		GenarchProjectConfigurationFile genarchProjectConfigurationFile = GenarchProjectConfigurationFile.open(project);
-		String architectureModelFileName = genarchProjectConfigurationFile.getArchitectureModelPath();
-		IFile architectureModelFile = project.getFile(architectureModelFileName);
-		URI architectureFileURI = URI.createPlatformResourceURI(architectureModelFile.getFullPath().toString());
-		ResourceSet architectureResourceSet = new ResourceSetImpl();
-		Resource architectureResource = architectureResourceSet.getResource(architectureFileURI,true);
-		
-		
-		//Extrai informações e do modelo de arquitetura
-		architecture = (Architecture)architectureResource.getContents().get(0);
+		iteracaoClasses();
+		importDependencies();
+		return assetData;
 	}
 	
 	//

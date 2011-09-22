@@ -180,31 +180,6 @@ public class CreateModelsOperation implements IRunnableWithProgress {
 		FMPModelUitl fmpModel = new FMPModelUitl(this.project,folderPath.append(featureFileName));
 		fmpModel.create(featuresContent,project.getName());
 		fmpModel.saveModel();
-		
-		
-		ModelNavigation modelNavigation;
-		modelNavigation = ModelNavigation.INSTANCE;
-		Node model = fmpModel.getFmpProject().getModel();
-//		for(TreeI fmpModel.getFmpProject().eAllContents()){
-//			
-//		}
-			
-		for (Iterator i = modelNavigation.getAllFeatures(fmpModel.getFmpProject()).iterator(); i.hasNext(); ) {
-			Feature aux = (Feature) i.next();
-			System.out.println("s ");
-		}
-		
-		for (Iterator i = modelNavigation.getAllFeatures(fmpModel.getFmpProject().getModel()).iterator(); i.hasNext(); ) {
-			Feature aux = (Feature) i.next();
-			System.out.println("s ");
-		}
-		
-		for (Iterator i = modelNavigation.getAllFeatures(fmpModel.getFmpProject().getMetaMetaModel()).iterator(); i.hasNext(); ) {
-			Feature aux = (Feature) i.next();
-			System.out.println("s ");
-		}
-		
-		
 
 		genarchProjectConfigurationFile.setFeatureModelPath(folderPath.append(featureFileName).toString());
 
