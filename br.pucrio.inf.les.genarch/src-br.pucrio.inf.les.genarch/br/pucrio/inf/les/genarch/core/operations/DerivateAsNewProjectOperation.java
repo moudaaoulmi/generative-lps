@@ -182,6 +182,9 @@ public class DerivateAsNewProjectOperation {
 
 		for ( int y = 0; y < resourcesContainers.size(); y++ ) {
 			ArchitectureResourcesContainer container = (ArchitectureResourcesContainer)resourcesContainers.get(y);
+						
+			createSingleFolder(container.getName(),container.getName(), architectureInstance);
+			
 			EList folders = container.getFolders();
 
 			for (int x = 0; x < folders.size(); x++) {
@@ -554,6 +557,31 @@ public class DerivateAsNewProjectOperation {
 			e.printStackTrace();
 			GenarchEMFPlugin.INSTANCE.log(e);
 		}
+
+		return folderInstance;
+	}
+	
+	
+	
+	/**
+	 * Inclui um diretório no produto final
+	 * @param name Nome do diretorio a ser criado
+	 * @param path Caminho do diretorio a ser criado
+	 * @param architectureInstance Instancia da Arquitetura
+	 * @return
+	 */
+	private br.pucrio.inf.les.genarch.models.instance.ArchitectureFolder createSingleFolder(String name, String path, ArchitectureInstance architectureInstance) {
+
+		buildFolder(path);
+		br.pucrio.inf.les.genarch.models.instance.ArchitectureFolder folderInstance = instanceFactory.createArchitectureFolder();
+		folderInstance.setName(name);
+		folderInstance.setPath(path);
+
+		if ( folderInstance.eAllContents().hasNext() ) {
+			architectureInstance.getFolders().add(folderInstance);
+		}
+
+		
 
 		return folderInstance;
 	}
