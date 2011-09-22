@@ -1,6 +1,7 @@
 package br.pucrio.inf.les.genarch.core.resources.dsl;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -17,16 +18,19 @@ import org.eclipse.jdt.core.dom.ArrayInitializer;
 import org.eclipse.jdt.core.dom.BodyDeclaration;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Expression;
+import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IExtendedModifier;
 import org.eclipse.jdt.core.dom.IMemberValuePairBinding;
 import org.eclipse.jdt.core.dom.ImportDeclaration;
 import org.eclipse.jdt.core.dom.MemberValuePair;
+import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.NormalAnnotation;
 import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.SingleMemberAnnotation;
 import org.eclipse.jdt.core.dom.StringLiteral;
+import org.eclipse.jdt.core.dom.TypeDeclaration;
 import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.text.edits.MalformedTreeException;
@@ -98,6 +102,7 @@ public class JavaAnnotationUtil {
 		}
 		return null;
 	}
+	
 
 	public static void addValuePair(NormalAnnotation annotation, MemberValuePair valuePair) {
 		List list = (List) annotation.getStructuralProperty(NormalAnnotation.VALUES_PROPERTY);
@@ -185,6 +190,42 @@ public class JavaAnnotationUtil {
 			GenarchEMFPlugin.INSTANCE.log(e);
 		}
 	}
+	
+	private static void removeMethodAnnotaions(CompilationUnit compilationUnit , String annotationName) {
+		List types = compilationUnit.types(); 
+		
+		TypeDeclaration typeDec = (TypeDeclaration) types.get(0); 
+		for(MethodDeclaration method : Arrays.asList(typeDec.getMethods())){
+			for (Iterator stream = method.modifiers().iterator(); stream.hasNext(); ) {
+				IExtendedModifier modifier = (IExtendedModifier) stream.next();
+				if (modifier.isAnnotation()) {
+					if (((Annotation)modifier).getTypeName().getFullyQualifiedName().equals(annotationName)) {
+						List list = (List) method.getStructuralProperty(method.getModifiersProperty());
+						list.remove(modifier);
+					}
+				}
+			}
+		}
+		
+	}
+	
+	private static void removeFieldAnnotaions(CompilationUnit compilationUnit , String annotationName) {
+		List types = compilationUnit.types(); 
+		
+		TypeDeclaration typeDec = (TypeDeclaration) types.get(0); 
+		for(FieldDeclaration field : Arrays.asList(typeDec.getFields())){
+			for (Iterator stream = field.modifiers().iterator(); stream.hasNext(); ) {
+				IExtendedModifier modifier = (IExtendedModifier) stream.next();
+				if (modifier.isAnnotation()) {
+					if (((Annotation)modifier).getTypeName().getFullyQualifiedName().equals(annotationName)) {
+						List list = (List) field.getStructuralProperty(field.getModifiersProperty());
+						list.remove(modifier);
+					}
+				}
+			}
+		}
+		
+	}
 
 	public static void removeFeatureAnnotations(IFile file) {	
 		ICompilationUnit compilationUnit = JavaCore.createCompilationUnitFrom(file);
@@ -194,6 +235,9 @@ public class JavaAnnotationUtil {
 		IDocument document = JDTASTUtil.createDocument(compilationUnit);		    
 		unit.recordModifications();
 
+
+		
+		
 		Annotation annotation = JavaAnnotationUtil.annotation(bodyDeclaration, "Feature");
 		if ( annotation != null ) {
 			JavaAnnotationUtil.removeAnnotation(bodyDeclaration, annotation);
@@ -203,6 +247,13 @@ public class JavaAnnotationUtil {
 		if ( annotation != null ) {
 			JavaAnnotationUtil.removeAnnotation(bodyDeclaration, annotation);
 		}
+		
+		
+		JavaAnnotationUtil.removeMethodAnnotaions(unit,"Feature");
+		JavaAnnotationUtil.removeMethodAnnotaions(unit,"Features");
+		
+		JavaAnnotationUtil.removeFieldAnnotaions(unit,"Feature");
+		JavaAnnotationUtil.removeFieldAnnotaions(unit,"Features");
 
 		List<ImportDeclaration> removeImports = new ArrayList<ImportDeclaration>();
 		List imports = unit.imports();

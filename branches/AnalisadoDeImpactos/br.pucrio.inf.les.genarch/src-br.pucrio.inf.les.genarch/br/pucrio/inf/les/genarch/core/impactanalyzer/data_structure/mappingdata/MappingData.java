@@ -7,20 +7,26 @@ import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.Ab
 import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.featuredata.FeatureData;
 
 public class MappingData {
-	private List<AbstractData> assets = new ArrayList<AbstractData>();
-	private List<AbstractData> features = new ArrayList<AbstractData>();
-	public List<AbstractData> getAssets() {
-		return assets;
-	}
-	public void setAssets(List<AbstractData> assets) {
-		this.assets = assets;
-	}
-	public List<AbstractData> getFeatures() {
-		return features;
-	}
-	public void setFeatures(List<AbstractData> features) {
+	private AbstractData asset;
+	private List<FeatureData> features = new ArrayList<FeatureData>();
+	public MappingData (AbstractData asset, List<FeatureData> features){
+		this.asset = asset;
 		this.features = features;
 	}
+	public MappingData (){
+		super();
+	}
 	
-	
+	public AbstractData getAsset() {
+		return asset;
+	}
+	public void setAsset(AbstractData asset) {
+		this.asset = asset;
+	}
+	public List<FeatureData> getFeatures() {
+		return features;
+	}
+	public void setFeatures(List<FeatureData> features) {
+		this.features = features;
+	}	
 }
