@@ -753,7 +753,7 @@ public class DerivateAsNewProjectOperation {
 			br.pucrio.inf.les.genarch.models.instance.ArchitectureComponent componentInstance,
 			ArchitectureClass clazz) {
 		
-		//[Demóstenes] - Added method, that returns classInstanceOne					
+		//[Demóstenes] - Added method, that returns classInstanceOne							
 		br.pucrio.inf.les.genarch.models.instance.ArchitectureClass classInstanceOne = createClass(clazz, architectureInstance, featureConfiguration);
 		
 		classInstanceOne.setName(clazz.getName());
@@ -809,7 +809,7 @@ public class DerivateAsNewProjectOperation {
 		for ( int methodsCount = 0; methodsCount < methods.size(); methodsCount++ ) {
 			ArchitectureMethod method = (ArchitectureMethod)methods.get(methodsCount);				
 			//[Demóstenes] - Find elemento by path and declaration.
-			ConfigurationMethod configurationMethod = (ConfigurationMethod)this.findConfigurationElementByPathDecl(method.getName(), method.getMethodDeclaration());
+			ConfigurationMethod configurationMethod = (ConfigurationMethod)this.findConfigurationElementByPathDecl(method.getPath(), method.getMethodDeclaration());
 		
 			if ( configurationMethod != null ) {
 				boolean status = this.evalFeatureConfiguration(configurationMethod,featureConfiguration);
@@ -852,6 +852,7 @@ public class DerivateAsNewProjectOperation {
 	}
 
 	// [Demóstenes] Remove atttribute or method declaration of class. 
+	// TODO [Demóstenes] - Verificar se a sobrecarga de métodos está sendo tratada.
 	private void removeContentClass(ArchitectureClass clazz, ArchitectureEntity content) {
 		monitor.subTask("Update File \"" + clazz.getPath() + "\"");
 
@@ -873,9 +874,15 @@ public class DerivateAsNewProjectOperation {
 		if ( entityResource instanceof IFile ) {
 			IFile newEntityFile = newProductProject.getFile(clazz.getPath());
 			
-			if ( "java".equals(newEntityFile.getFileExtension()) ) {
-				//[Demóstenes] - Remove content member in newEntityFile.
-				JDTASTUtil.removeContent(newEntityFile, content.getName());	
+			if ( "java".equals(newEntityFile.getFileExtension()) ) {				
+				if(content instanceof ArchitectureAttribute){
+					ArchitectureAttribute attribute = (ArchitectureAttribute) content;
+					JDTASTUtil.removeContentField(newEntityFile, attribute.getName());
+				}else{
+					//TODO [Demóstenes] - Diferenciar os métodos pelos nomes, tipo de retorno e lista de parâmetros / MethodDeclaration.
+					ArchitectureMethod method = (ArchitectureMethod) content;
+					JDTASTUtil.removeContentMethod(newEntityFile, method.getMethodDeclaration());
+				}
 				
 			}			
 		}
