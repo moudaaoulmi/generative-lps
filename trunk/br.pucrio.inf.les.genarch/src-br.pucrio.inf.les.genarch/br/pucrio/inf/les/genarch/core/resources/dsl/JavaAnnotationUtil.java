@@ -17,16 +17,19 @@ import org.eclipse.jdt.core.dom.ArrayInitializer;
 import org.eclipse.jdt.core.dom.BodyDeclaration;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.Expression;
+import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IExtendedModifier;
 import org.eclipse.jdt.core.dom.IMemberValuePairBinding;
 import org.eclipse.jdt.core.dom.ImportDeclaration;
 import org.eclipse.jdt.core.dom.MemberValuePair;
+import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.NormalAnnotation;
 import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.SingleMemberAnnotation;
 import org.eclipse.jdt.core.dom.StringLiteral;
+import org.eclipse.jdt.core.dom.TypeDeclaration;
 import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.text.edits.MalformedTreeException;
@@ -186,6 +189,7 @@ public class JavaAnnotationUtil {
 		}
 	}
 
+	//[Demóstenes] - Remover as anotações das propriedades e do respectivo arquivo.
 	public static void removeFeatureAnnotations(IFile file) {	
 		ICompilationUnit compilationUnit = JavaCore.createCompilationUnitFrom(file);
 		ASTNode astNode = JDTASTUtil.astNode(file, compilationUnit);
@@ -197,13 +201,49 @@ public class JavaAnnotationUtil {
 		Annotation annotation = JavaAnnotationUtil.annotation(bodyDeclaration, "Feature");
 		if ( annotation != null ) {
 			JavaAnnotationUtil.removeAnnotation(bodyDeclaration, annotation);
-		}	
+		}
 
 		annotation = JavaAnnotationUtil.annotation(bodyDeclaration, "Features");
 		if ( annotation != null ) {
 			JavaAnnotationUtil.removeAnnotation(bodyDeclaration, annotation);
 		}
-
+		
+		TypeDeclaration type = JDTASTUtil.typeDeclaration(unit);
+				
+		//[Demóstenes] - Remove todas anotações dos atributos.
+		FieldDeclaration[] fields = type.getFields();
+		
+		for(int i=0; i< fields.length;i++){
+			FieldDeclaration field = fields[i];			
+				
+			annotation = JavaAnnotationUtil.annotation(field, "Feature");
+			if ( annotation != null ) {
+				JavaAnnotationUtil.removeAnnotation(field, annotation);
+			}
+			
+			annotation = JavaAnnotationUtil.annotation(field, "Features");
+			if ( annotation != null ) {
+				JavaAnnotationUtil.removeAnnotation(field, annotation);
+			}
+		}
+		
+		//[Demóstenes] - Remove todas anotações dos métodos.		
+		MethodDeclaration[] methods = type.getMethods();
+		
+		for(int i=0; i< methods.length;i++){
+			MethodDeclaration method = methods[i];			
+				
+			annotation = JavaAnnotationUtil.annotation(method, "Feature");
+			if ( annotation != null ) {
+				JavaAnnotationUtil.removeAnnotation(method, annotation);
+			}
+			
+			annotation = JavaAnnotationUtil.annotation(method, "Features");
+			if ( annotation != null ) {
+				JavaAnnotationUtil.removeAnnotation(method, annotation);
+			}
+		}
+		
 		List<ImportDeclaration> removeImports = new ArrayList<ImportDeclaration>();
 		List imports = unit.imports();
 		for ( int x = 0; x < imports.size(); x++ ) {
