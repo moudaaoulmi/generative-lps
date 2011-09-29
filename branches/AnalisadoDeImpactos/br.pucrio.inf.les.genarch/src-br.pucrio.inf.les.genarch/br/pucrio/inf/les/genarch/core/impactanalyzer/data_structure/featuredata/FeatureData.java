@@ -13,6 +13,13 @@ public class FeatureData {
 	private Integer max;
 	
 	
+	public boolean equals(FeatureData featureData){
+		if(featureData.getId().toLowerCase().equals(this.getId().toLowerCase()))
+			return true;
+		else
+			return false;		
+	}
+	
 	public void addDependence(String featureId){
 		dependence.add(featureId);
 	}

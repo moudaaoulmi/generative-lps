@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClassData extends AbstractData{
-	
-	
+
 	private List<MethodData> methods = new ArrayList<MethodData>(); 
 	private List<FieldData> fields = new ArrayList<FieldData>();
+	private List<ClassData> classDependences = new ArrayList<ClassData>();	
+	private List<MethodData> methodReverseDependences = new ArrayList<MethodData>();
+	private List<ClassData> classReverseDependences = new ArrayList<ClassData>();
 	
 	
 	public ClassData(String name, String shortName) {
@@ -33,6 +35,43 @@ public class ClassData extends AbstractData{
 	
 	public void addAllFields(List<FieldData> fields) {
 		this.fields.addAll(fields);
+	}
+	
+	public void addClassDependences(ClassData clazz){
+		classDependences.add(clazz);
+	}
+	
+	public void addClassReverseDependences(ClassData clazz){
+		classReverseDependences.add(clazz);
+	}
+			
+	public void addMethodReverseDependences(MethodData method){
+		methodReverseDependences.add(method);
+	}
+
+	public List<ClassData> getClassDependences() {
+		return classDependences;
+	}
+
+	public void setClassDependences(List<ClassData> classDependences) {
+		this.classDependences = classDependences;
+	}
+
+	public List<MethodData> getMethodReverseDependences() {
+		return methodReverseDependences;
+	}
+
+	public void setMethodReverseDependences(
+			List<MethodData> methodReverseDependences) {
+		this.methodReverseDependences = methodReverseDependences;
+	}
+
+	public List<ClassData> getClassReverseDependences() {
+		return classReverseDependences;
+	}
+
+	public void setClassReverseDependences(List<ClassData> classReverseDependences) {
+		this.classReverseDependences = classReverseDependences;
 	}
 
 }

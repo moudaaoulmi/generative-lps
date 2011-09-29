@@ -3,6 +3,10 @@ package br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.ClassData;
+import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.FieldData;
+import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.MethodData;
+
 public class AnalysisData {
 	private List<ClassData> allClass = new ArrayList<ClassData>();
 	

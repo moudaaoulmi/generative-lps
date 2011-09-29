@@ -148,13 +148,35 @@ public class AssetImporter {
 				for(FieldNode field : classNode.getDeclaredFields() ){
 					FieldData fieldData = assetData.getField(field.getName(), field.getClassName());
 					if(fieldData == null) continue;
+					//metodos que acessam o atributo
 					for(MethodNode callerMethod : field.getCallerMethods()){
 						MethodData callerMethodData = assetData.getMethod(callerMethod.getShortName().replaceAll("(\\(.*\\))", ""),  callerMethod.getClassName());
 						if(callerMethodData == null) continue;
 						fieldData.addMethodReverseDependences(callerMethodData);
 					}
 				}
-				
+				/**
+				//Verificar as dependencias da Classe
+				ClassData classData = assetData.getClass(classNode.getName(), classNode.getClassName());
+				if(classData == null) continue;
+				//metodos que acessam a classe
+				for(MethodNode callerMethod : classNode.getCallerMethods()){
+					MethodData callerMethodData = assetData.getMethod(callerMethod.getShortName().replaceAll("(\\(.*\\))", ""),  callerMethod.getClassName());
+					if(callerMethodData == null) continue;
+					classData.addMethodReverseDependences(callerMethodData);
+				}
+				//Classes que acessam a classe
+				for(ClassNode callerClass : classNode.getCallerClasses() ){
+					ClassData callerMethodData = assetData.getClass(callerClass.getShortName().replaceAll("(\\(.*\\))", ""),  callerClass.getClassName());
+					if(callerMethodData == null) continue;
+					classData.addMethodReverseDependences(callerMethodData);
+				}
+				//Classes que essa classe acessa
+				for(MethodNode callerMethod : classNode.getCallerMethods()){
+					MethodData callerMethodData = assetData.getMethod(callerMethod.getShortName().replaceAll("(\\(.*\\))", ""),  callerMethod.getClassName());
+					if(callerMethodData == null) continue;
+					classData.addMethodReverseDependences(callerMethodData);
+				}*/
 			}
 		}
 		assetData.print();

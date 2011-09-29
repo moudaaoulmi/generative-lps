@@ -17,9 +17,12 @@ import org.eclipse.jface.operation.IRunnableWithProgress;
 import br.pucrio.inf.les.genarch.GenarchEMFPlugin;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.AssetImporter;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.FeatureImporter;
+import br.pucrio.inf.les.genarch.core.impactanalyzer.ImpactAnalyzer;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.MappingImporter;
+import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.AbstractData;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.assetdata.AnalysisAssetData;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.featuredata.AnalysisFeatureData;
+import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.featuredata.FeatureData;
 import br.pucrio.inf.les.genarch.core.impactanalyzer.data_structure.mappingdata.AnalysisMappingData;
 import br.pucrio.inf.les.genarch.core.project.GenarchProjectConfigurationFile;
 import br.pucrio.inf.les.genarch.models.architecture.Architecture;
@@ -98,5 +101,15 @@ public class AssetsDependenciesAnalysisOperation implements IRunnableWithProgres
 		System.out.println("");
 		mappingImporter = new MappingImporter(configuration,analysisAssetData,analysisFeatureData);
 		AnalysisMappingData analysisMappingData = mappingImporter.extract();
+		
+		ImpactAnalyzer analyzer = new ImpactAnalyzer(analysisAssetData, analysisFeatureData, analysisMappingData);
+		
+//		for(AbstractData data :  analysisAssetData.getAllData()){
+//			analyzer.getImpactAsset2Features(data);
+//		}
+		for(FeatureData feature :  analysisFeatureData.getAllFeatures()){
+			analyzer.getImpactFeature2Assets(feature);
+		}
+		
 	}
 }

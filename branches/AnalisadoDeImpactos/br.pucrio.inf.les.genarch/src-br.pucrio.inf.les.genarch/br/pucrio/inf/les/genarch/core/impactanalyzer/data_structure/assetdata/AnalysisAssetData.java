@@ -71,6 +71,21 @@ public class AnalysisAssetData {
 		}		
 		return null;
 	}
+	
+	
+	//testar
+	public AbstractData getAbstractData(AbstractData abstractData){
+		if(abstractData instanceof FieldData){
+			return getField(abstractData.getName(), abstractData.getPath());
+		}else if(abstractData instanceof MethodData){
+			return getMethod(abstractData.getName(), abstractData.getPath());
+		}else if(abstractData instanceof ClassData){
+			return getClass(abstractData.getName(), abstractData.getPath());
+		}
+		
+		return null;
+	}
+	
 	public ClassData getClass(String name, String path){
 		List<ClassData> list = new ArrayList<ClassData>();
 		list.addAll(getAllClass());
@@ -88,6 +103,14 @@ public class AnalysisAssetData {
 				return data;			
 		}		
 		return null;
+	}
+	
+	public List<AbstractData> getAllData(){
+		List<AbstractData> result = new ArrayList<AbstractData>();
+		result.addAll(getAllClass());
+		result.addAll(getAllFields());
+		result.addAll(getAllMethods());
+		return result;
 	}
 	
 	public void print(){

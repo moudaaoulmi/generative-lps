@@ -13,10 +13,10 @@ public class MappingData {
 		this.asset = asset;
 		this.features = features;
 	}
+	
 	public MappingData (){
 		super();
-	}
-	
+	}	
 	public AbstractData getAsset() {
 		return asset;
 	}
