@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="externalResources/data.jar"/>
+	<classpathentry exported="true" kind="lib" path="externalResources/antlr_2.7.5.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="externalResources/javabdd-1.0b2.jar"/>
+	<classpathentry exported="true" kind="lib" path="bin" sourcepath="bin"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
