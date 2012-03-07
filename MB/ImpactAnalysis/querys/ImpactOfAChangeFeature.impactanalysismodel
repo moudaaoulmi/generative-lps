@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impactanalysismodel:ImpactAnalysisModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:impactanalysismodel="http://impactanalysismodel/1.0">
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoSubtracaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste" Signature="br.pucrio.inf.les.genarch.exemplos.teste OperacaoSubtracaoTeste.java" Modifiers="PUBLIC ">
+    <DeclaredMethods Name="OperacaoSubtracaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste OperacaoSubtracaoTeste " ReturnType="void" Modifiers="PUBLIC " Arguments=""/>
+    <DeclaredMethods Name="consultoria" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste consultoria " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+      <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7/@DeclaredMethods.1"/>
+      <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7/@DeclaredMethods.5"/>
+      <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7/@DeclaredMethods.0"/>
+      <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7"/>
+      <Dependencies href="#//@AssetsReference.2"/>
+      <Dependencies href="#//@AssetsReference.0"/>
+    </DeclaredMethods>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste testResultado " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7/@DeclaredMethods.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7/@DeclaredMethods.5"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7/@DeclaredMethods.0"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7"/>
+    <Dependencies href="#//@AssetsReference.2"/>
+    <Dependencies href="#//@AssetsReference.0"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoSubtracao.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework OperacaoSubtracao.java" Modifiers="PUBLIC ">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="resultado" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoSubtracao" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoSubtracao resultado " ReturnType="float" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7/@DeclaredMethods.3"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7/@DeclaredMethods.2"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.7"/>
+  </AssetsReference>
+  <UseCasesReference Name="classOpeSubUC"/>
+  <UseCasesReference Name="metodoResultadoUC"/>
+</impactanalysismodel:ImpactAnalysisModel>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impactanalysismodel:ImpactAnalysisModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:impactanalysismodel="http://impactanalysismodel/1.0">
+  <FeaturesReference Name="Subtracao" Type="Mandatory"/>
+  <FeaturesReference Name="Operador" Type="Mandatory"/>
+  <FeaturesReference Name="GrandeTeste" Type="Mandatory"/>
+  <FeaturesReference Name="Teste" Type="Mandatory"/>
+  <FeaturesReference Name="VerificadorSubtracao"/>
+  <FeaturesReference Name="Operacao" Type="Mandatory">
+    <FeatureChild Name="Multiplicacao" Type="Mandatory"/>
+    <FeatureChild Name="Divisao" Type="Mandatory"/>
+    <FeatureChild Name="Adicao" Type="Mandatory">
+      <FeatureChild Name="Feature1"/>
+      <FeatureChild Name="Feature2"/>
+    </FeatureChild>
+  </FeaturesReference>
+</impactanalysismodel:ImpactAnalysisModel>

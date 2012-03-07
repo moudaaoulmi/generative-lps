@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<br.pucrio.inf.les.genarch.models.configuration:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:br.pucrio.inf.les.genarch.models.configuration="http:///ConfigurationMetaModel.ecore">
+  <mappingRelationships>
+    <containers name="src">
+      <components name="br" path="src/br">
+        <subComponents name="pucrio" path="src/br/pucrio">
+          <subComponents name="inf" path="src/br/pucrio/inf">
+            <subComponents name="les" path="src/br/pucrio/inf/les">
+              <subComponents name="genarch" path="src/br/pucrio/inf/les/genarch">
+                <subComponents name="exemplos" path="src/br/pucrio/inf/les/genarch/exemplos">
+                  <subComponents name="teste" path="src/br/pucrio/inf/les/genarch/exemplos/teste">
+                    <classes name="OperacaoSubtracaoTeste.java" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoSubtracaoTeste.java">
+                      <featureExpression expression="Subtracao"/>
+                      <Methods name="consultoria" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoSubtracaoTeste.java" MethodDeclaration="void consultoria( )">
+                        <featureExpression expression="Operador and GrandeTeste"/>
+                      </Methods>
+                      <Methods name="testResultado" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoSubtracaoTeste.java" MethodDeclaration="void testResultado( )">
+                        <featureExpression expression="Subtracao and Teste"/>
+                      </Methods>
+                    </classes>
+                    <classes name="OperacaoMultiplicacaoTeste.java" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoMultiplicacaoTeste.java">
+                      <featureExpression expression="Multiplicacao and Teste"/>
+                      <Methods name="testResultado" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoMultiplicacaoTeste.java" MethodDeclaration="void testResultado( )">
+                        <featureExpression expression="Multiplicacao and Teste"/>
+                      </Methods>
+                    </classes>
+                    <classes name="OperacaoDivisaoTeste.java" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoDivisaoTeste.java">
+                      <featureExpression expression="Divisao and Teste"/>
+                      <Methods name="testResultado" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoDivisaoTeste.java" MethodDeclaration="void testResultado( )">
+                        <featureExpression expression="Divisao and Teste"/>
+                      </Methods>
+                    </classes>
+                    <classes name="OperacaoAdicaoTeste.java" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoAdicaoTeste.java">
+                      <featureExpression expression="Adicao and Teste"/>
+                      <Methods name="testResultado" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoAdicaoTeste.java" MethodDeclaration="void testResultado( )">
+                        <featureExpression expression="Adicao and Teste"/>
+                      </Methods>
+                    </classes>
+                  </subComponents>
+                  <subComponents name="ms" path="src/br/pucrio/inf/les/genarch/exemplos/ms">
+                    <subComponents name="framework" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework">
+                      <classes name="OperacaoSubtracao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoSubtracao.java">
+                        <featureExpression expression="Subtracao"/>
+                        <Methods name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoSubtracao.java" MethodDeclaration="float resultado( )">
+                          <featureExpression expression="Subtracao"/>
+                        </Methods>
+                      </classes>
+                      <classes name="OperacaoMultiplicacao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoMultiplicacao.java">
+                        <featureExpression expression="Multiplicacao"/>
+                        <Methods name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoMultiplicacao.java" MethodDeclaration="float resultado( )">
+                          <featureExpression expression="Multiplicacao"/>
+                        </Methods>
+                      </classes>
+                      <classes name="OperacaoDivisao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java">
+                        <featureExpression expression="Divisao"/>
+                        <Methods name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java" MethodDeclaration="float resultado( )">
+                          <featureExpression expression="Divisao"/>
+                        </Methods>
+                        <Methods name="getOperacaoAdicao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java" MethodDeclaration="OperacaoAdicao getOperacaoAdicao( )">
+                          <featureExpression expression="Divisao"/>
+                        </Methods>
+                      </classes>
+                      <classes name="OperacaoAdicao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoAdicao.java">
+                        <featureExpression expression="Adicao"/>
+                        <Methods name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoAdicao.java" MethodDeclaration="float resultado( )">
+                          <featureExpression expression="Adicao"/>
+                        </Methods>
+                        <Fields name="testeField" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoAdicao.java" FieldDeclaration="int testeField">
+                          <featureExpression expression="Feature1 and Feature2"/>
+                        </Fields>
+                      </classes>
+                      <classes name="Operacao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java">
+                        <featureExpression expression="Operacao"/>
+                        <Methods name="setTermoUm" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="void setTermoUm( float valor )">
+                          <featureExpression expression="Operacao"/>
+                        </Methods>
+                        <Methods name="setTermoDois" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="void setTermoDois( float valor )">
+                          <featureExpression expression="Operacao"/>
+                        </Methods>
+                        <Methods name="getTermoUm" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="float getTermoUm( )">
+                          <featureExpression expression="Operacao"/>
+                        </Methods>
+                        <Methods name="getTermoDois" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="float getTermoDois( )">
+                          <featureExpression expression="Operacao"/>
+                        </Methods>
+                        <Methods name="testeOpcional" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="float testeOpcional( )">
+                          <featureExpression expression="Operacao"/>
+                        </Methods>
+                        <Methods name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="float resultado( )">
+                          <featureExpression expression="Operacao"/>
+                        </Methods>
+                        <Fields name="termoUm" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" FieldDeclaration="float termoUm">
+                          <featureExpression expression="Operacao"/>
+                        </Fields>
+                        <Fields name="termoDois" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" FieldDeclaration="float termoDois">
+                          <featureExpression expression="Operacao"/>
+                        </Fields>
+                      </classes>
+                      <subComponents name="plus" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus">
+                        <classes name="Verificador.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java">
+                          <featureExpression expression="Verificador"/>
+                          <Methods name="verificaAdicao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java" MethodDeclaration="void verificaAdicao( )">
+                            <featureExpression expression="VerificadorAdicao"/>
+                          </Methods>
+                          <Methods name="verificaSubtracao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java" MethodDeclaration="void verificaSubtracao( )">
+                            <featureExpression expression="VerificadorSubtracao"/>
+                          </Methods>
+                          <Methods name="verificaSubtracaoAlfa" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java" MethodDeclaration="void verificaSubtracaoAlfa( )">
+                            <featureExpression expression="VerificadorSubtracao"/>
+                          </Methods>
+                        </classes>
+                        <classes name="Consultoria.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Consultoria.java">
+                          <featureExpression expression="Consultoria"/>
+                          <Methods name="realizaConsultoria1" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Consultoria.java" MethodDeclaration="void realizaConsultoria1( )">
+                            <featureExpression expression="Consultoria"/>
+                          </Methods>
+                          <Methods name="realizaConsultoria2" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Consultoria.java" MethodDeclaration="void realizaConsultoria2( )">
+                            <featureExpression expression="Consultoria"/>
+                          </Methods>
+                          <Fields name="vf" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Consultoria.java" FieldDeclaration="Verificador vf">
+                            <featureExpression expression="Consultoria"/>
+                          </Fields>
+                        </classes>
+                      </subComponents>
+                    </subComponents>
+                  </subComponents>
+                </subComponents>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+      </components>
+    </containers>
+  </mappingRelationships>
+</br.pucrio.inf.les.genarch.models.configuration:Configuration>

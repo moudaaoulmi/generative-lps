@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impactanalysismodel:ImpactAnalysisModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:impactanalysismodel="http://impactanalysismodel/1.0">
+  <FeaturesReference Name="MobileMedia07_OO" Type="Mandatory">
+    <FeatureChild Name="MediaSelection" Type="Mandatory">
+      <FeatureChild Name="Music" Type="Mandatory"/>
+      <FeatureChild Name="Video" Type="Mandatory"/>
+      <FeatureChild Name="Photo" Type="Mandatory"/>
+    </FeatureChild>
+    <FeatureChild Name="MediaManagement" Type="Mandatory">
+      <FeatureChild Name="Sorting" Type="Mandatory"/>
+    </FeatureChild>
+    <FeatureChild Name="Media" Type="Mandatory">
+      <FeatureChild Name="SmsFeature" Type="Mandatory"/>
+    </FeatureChild>
+  </FeaturesReference>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.2/@FeatureChild.0" Assets="//@AssetsReference.49"/>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="SmsSenderThread.java" Path="lancs.mobilemedia.sms">
+    <DeclaredMethods Name="SmsSenderThread" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredMethods Name="run" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredMethods Name="getMessageText" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredMethods Name="setMessageText" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredMethods Name="setBinaryData" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredMethods Name="getSmsPort" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredMethods Name="setSmsPort" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredFields Name="smsPort" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredFields Name="destinationAddress" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredFields Name="messageText" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+    <DeclaredFields Name="binData" Path="lancs.mobilemedia.sms.SmsSenderThread"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="SmsSenderController.java" Path="lancs.mobilemedia.sms">
+    <DeclaredMethods Name="SmsSenderController" Path="lancs.mobilemedia.sms.SmsSenderController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.sms.SmsSenderController"/>
+    <DeclaredFields Name="imageName" Path="lancs.mobilemedia.sms.SmsSenderController"/>
+    <DeclaredFields Name="networkScreen" Path="lancs.mobilemedia.sms.SmsSenderController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="SmsReceiverThread.java" Path="lancs.mobilemedia.sms">
+    <DeclaredMethods Name="SmsReceiverThread" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredMethods Name="run" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="controller" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="connections" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="smsPort" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="smsconn" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="msg" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="senderAddress" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="acceptPhotoCommand" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="rejectPhotoCommand" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+    <DeclaredFields Name="errorNotice" Path="lancs.mobilemedia.sms.SmsReceiverThread"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="SmsReceiverController.java" Path="lancs.mobilemedia.sms">
+    <DeclaredMethods Name="SmsReceiverController" Path="lancs.mobilemedia.sms.SmsReceiverController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.sms.SmsReceiverController"/>
+    <DeclaredMethods Name="setIncommingData" Path="lancs.mobilemedia.sms.SmsReceiverController"/>
+    <DeclaredFields Name="incomingImageData" Path="lancs.mobilemedia.sms.SmsReceiverController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="SmsMessaging.java" Path="lancs.mobilemedia.sms">
+    <DeclaredMethods Name="SmsMessaging" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="SmsMessaging" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="sendImage" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="receiveImage" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="cleanUpConnections" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="cleanUpReceiverConnections" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="getDestinationPhoneNumber" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="setDestinationPhoneNumber" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="getSmsReceivePort" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="setSmsReceivePort" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="getSmsSendPort" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredMethods Name="setSmsSendPort" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredFields Name="smsSendPort" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredFields Name="smsReceivePort" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredFields Name="destinationPhoneNumber" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredFields Name="smsProtocolPrefix" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredFields Name="smsConn" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredFields Name="msg" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+    <DeclaredFields Name="connections" Path="lancs.mobilemedia.sms.SmsMessaging"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="NetworkScreen.java" Path="lancs.mobilemedia.sms">
+    <DeclaredMethods Name="NetworkScreen" Path="lancs.mobilemedia.sms.NetworkScreen"/>
+    <DeclaredMethods Name="getRecPhoneNum" Path="lancs.mobilemedia.sms.NetworkScreen"/>
+    <DeclaredMethods Name="getRecPort" Path="lancs.mobilemedia.sms.NetworkScreen"/>
+    <DeclaredFields Name="recPhoneNum" Path="lancs.mobilemedia.sms.NetworkScreen"/>
+    <DeclaredFields Name="rPort" Path="lancs.mobilemedia.sms.NetworkScreen"/>
+    <DeclaredFields Name="ok" Path="lancs.mobilemedia.sms.NetworkScreen"/>
+    <DeclaredFields Name="cancel" Path="lancs.mobilemedia.sms.NetworkScreen"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="UnavailablePhotoAlbumException.java" Path="lancs.mobilemedia.lib.exceptions">
+    <DeclaredMethods Name="UnavailablePhotoAlbumException" Path="lancs.mobilemedia.lib.exceptions.UnavailablePhotoAlbumException"/>
+    <DeclaredMethods Name="UnavailablePhotoAlbumException" Path="lancs.mobilemedia.lib.exceptions.UnavailablePhotoAlbumException"/>
+    <DeclaredMethods Name="UnavailablePhotoAlbumException" Path="lancs.mobilemedia.lib.exceptions.UnavailablePhotoAlbumException"/>
+    <DeclaredMethods Name="getCause" Path="lancs.mobilemedia.lib.exceptions.UnavailablePhotoAlbumException"/>
+    <DeclaredFields Name="cause" Path="lancs.mobilemedia.lib.exceptions.UnavailablePhotoAlbumException"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="PersistenceMechanismException.java" Path="lancs.mobilemedia.lib.exceptions">
+    <DeclaredMethods Name="PersistenceMechanismException" Path="lancs.mobilemedia.lib.exceptions.PersistenceMechanismException"/>
+    <DeclaredMethods Name="PersistenceMechanismException" Path="lancs.mobilemedia.lib.exceptions.PersistenceMechanismException"/>
+    <DeclaredMethods Name="PersistenceMechanismException" Path="lancs.mobilemedia.lib.exceptions.PersistenceMechanismException"/>
+    <DeclaredMethods Name="getCause" Path="lancs.mobilemedia.lib.exceptions.PersistenceMechanismException"/>
+    <DeclaredFields Name="cause" Path="lancs.mobilemedia.lib.exceptions.PersistenceMechanismException"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="InvalidPhotoAlbumNameException.java" Path="lancs.mobilemedia.lib.exceptions">
+    <DeclaredMethods Name="InvalidPhotoAlbumNameException" Path="lancs.mobilemedia.lib.exceptions.InvalidPhotoAlbumNameException"/>
+    <DeclaredMethods Name="InvalidPhotoAlbumNameException" Path="lancs.mobilemedia.lib.exceptions.InvalidPhotoAlbumNameException"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="InvalidImageFormatException.java" Path="lancs.mobilemedia.lib.exceptions">
+    <DeclaredMethods Name="InvalidImageFormatException" Path="lancs.mobilemedia.lib.exceptions.InvalidImageFormatException"/>
+    <DeclaredMethods Name="InvalidImageFormatException" Path="lancs.mobilemedia.lib.exceptions.InvalidImageFormatException"/>
+    <DeclaredMethods Name="InvalidImageFormatException" Path="lancs.mobilemedia.lib.exceptions.InvalidImageFormatException"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="InvalidImageDataException.java" Path="lancs.mobilemedia.lib.exceptions">
+    <DeclaredMethods Name="InvalidImageDataException" Path="lancs.mobilemedia.lib.exceptions.InvalidImageDataException"/>
+    <DeclaredMethods Name="InvalidImageDataException" Path="lancs.mobilemedia.lib.exceptions.InvalidImageDataException"/>
+    <DeclaredMethods Name="InvalidImageDataException" Path="lancs.mobilemedia.lib.exceptions.InvalidImageDataException"/>
+    <DeclaredMethods Name="getCause" Path="lancs.mobilemedia.lib.exceptions.InvalidImageDataException"/>
+    <DeclaredFields Name="cause" Path="lancs.mobilemedia.lib.exceptions.InvalidImageDataException"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="InvalidArrayFormatException.java" Path="lancs.mobilemedia.lib.exceptions">
+    <DeclaredMethods Name="InvalidArrayFormatException" Path="lancs.mobilemedia.lib.exceptions.InvalidArrayFormatException"/>
+    <DeclaredMethods Name="InvalidArrayFormatException" Path="lancs.mobilemedia.lib.exceptions.InvalidArrayFormatException"/>
+    <DeclaredMethods Name="InvalidArrayFormatException" Path="lancs.mobilemedia.lib.exceptions.InvalidArrayFormatException"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="ImagePathNotValidException.java" Path="lancs.mobilemedia.lib.exceptions">
+    <DeclaredMethods Name="ImagePathNotValidException" Path="lancs.mobilemedia.lib.exceptions.ImagePathNotValidException"/>
+    <DeclaredMethods Name="ImagePathNotValidException" Path="lancs.mobilemedia.lib.exceptions.ImagePathNotValidException"/>
+    <DeclaredMethods Name="ImagePathNotValidException" Path="lancs.mobilemedia.lib.exceptions.ImagePathNotValidException"/>
+    <DeclaredMethods Name="getCause" Path="lancs.mobilemedia.lib.exceptions.ImagePathNotValidException"/>
+    <DeclaredFields Name="cause" Path="lancs.mobilemedia.lib.exceptions.ImagePathNotValidException"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="ImageNotFoundException.java" Path="lancs.mobilemedia.lib.exceptions">
+    <DeclaredMethods Name="ImageNotFoundException" Path="lancs.mobilemedia.lib.exceptions.ImageNotFoundException"/>
+    <DeclaredMethods Name="ImageNotFoundException" Path="lancs.mobilemedia.lib.exceptions.ImageNotFoundException"/>
+    <DeclaredMethods Name="ImageNotFoundException" Path="lancs.mobilemedia.lib.exceptions.ImageNotFoundException"/>
+    <DeclaredMethods Name="getCause" Path="lancs.mobilemedia.lib.exceptions.ImageNotFoundException"/>
+    <DeclaredFields Name="cause" Path="lancs.mobilemedia.lib.exceptions.ImageNotFoundException"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MusicMediaUtil.java" Path="lancs.mobilemedia.core.util">
+    <DeclaredMethods Name="getBytesFromMediaInfo" Path="lancs.mobilemedia.core.util.MusicMediaUtil"/>
+    <DeclaredMethods Name="getMultiMediaInfoFromBytes" Path="lancs.mobilemedia.core.util.MusicMediaUtil"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MediaUtil.java" Path="lancs.mobilemedia.core.util">
+    <DeclaredMethods Name="readMediaAsByteArray" Path="lancs.mobilemedia.core.util.MediaUtil"/>
+    <DeclaredMethods Name="getMediaInfoFromBytes" Path="lancs.mobilemedia.core.util.MediaUtil"/>
+    <DeclaredMethods Name="getBytesFromMediaInfo" Path="lancs.mobilemedia.core.util.MediaUtil"/>
+    <DeclaredFields Name="DELIMITER" Path="lancs.mobilemedia.core.util.MediaUtil"/>
+    <DeclaredFields Name="endIndex" Path="lancs.mobilemedia.core.util.MediaUtil"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="Constants.java" Path="lancs.mobilemedia.core.util">
+    <DeclaredFields Name="ALBUMLIST_SCREEN" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="IMAGE_SCREEN" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="IMAGELIST_SCREEN" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="NEWALBUM_SCREEN" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="CONFIRMDELETEALBUM_SCREEN" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="ADDPHOTOTOALBUM_SCREEN" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="SCREEN_WIDTH" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="SCREEN_HEIGHT" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="SCREEN_WIDTH" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="SCREEN_HEIGHT" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="SCREEN_WIDTH" Path="lancs.mobilemedia.core.util.Constants"/>
+    <DeclaredFields Name="SCREEN_HEIGHT" Path="lancs.mobilemedia.core.util.Constants"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MainUIMidlet.java" Path="lancs.mobilemedia.core.ui">
+    <DeclaredMethods Name="MainUIMidlet" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredMethods Name="startApp" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredMethods Name="pauseApp" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredMethods Name="destroyApp" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredFields Name="imageRootController" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredFields Name="imageModel" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredFields Name="musicRootController" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredFields Name="musicModel" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredFields Name="videoRootController" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+    <DeclaredFields Name="videoModel" Path="lancs.mobilemedia.core.ui.MainUIMidlet"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="SelectTypeOfMedia.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="SelectTypeOfMedia" Path="lancs.mobilemedia.core.ui.screens.SelectTypeOfMedia"/>
+    <DeclaredMethods Name="initMenu" Path="lancs.mobilemedia.core.ui.screens.SelectTypeOfMedia"/>
+    <DeclaredMethods Name="deleteAll" Path="lancs.mobilemedia.core.ui.screens.SelectTypeOfMedia"/>
+    <DeclaredMethods Name="repaintListMedias" Path="lancs.mobilemedia.core.ui.screens.SelectTypeOfMedia"/>
+    <DeclaredFields Name="exitCommand" Path="lancs.mobilemedia.core.ui.screens.SelectTypeOfMedia"/>
+    <DeclaredFields Name="selectCommand" Path="lancs.mobilemedia.core.ui.screens.SelectTypeOfMedia"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="PlayVideoScreen.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="startVideo" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredMethods Name="stopVideo" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredMethods Name="PlayVideoScreen" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredMethods Name="paint" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredMethods Name="keyPressed" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredMethods Name="setVisibleVideo" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="player" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="videoControl" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="start" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="back" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="stop" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="copy" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="display" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="error" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+    <DeclaredFields Name="dy" Path="lancs.mobilemedia.core.ui.screens.PlayVideoScreen"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="PlayMediaScreen.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="PlayMediaScreen" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredMethods Name="itemStateChanged" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredMethods Name="startPlay" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredMethods Name="pausePlay" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredMethods Name="paint" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="start" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="back" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="stop" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="copy" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="midiPlayer" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="volControl" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="pitchControl" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="tempoControl" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="form" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="volGauge" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="pitchGauge" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+    <DeclaredFields Name="tempoGauge" Path="lancs.mobilemedia.core.ui.screens.PlayMediaScreen"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="PhotoViewScreen.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="PhotoViewScreen" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredMethods Name="paint" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredMethods Name="setImage" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredMethods Name="getImage" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredMethods Name="isFromSMS" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredMethods Name="setFromSMS" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredFields Name="imageName" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredFields Name="image" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredFields Name="model" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredFields Name="byteImage" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredFields Name="backCommand" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredFields Name="copyCommand" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredFields Name="smscopyCommand" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+    <DeclaredFields Name="fromSMS" Path="lancs.mobilemedia.core.ui.screens.PhotoViewScreen"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="NewLabelScreen.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="NewLabelScreen" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredMethods Name="getLabelName" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredMethods Name="setFormType" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredMethods Name="getFormType" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredFields Name="NEW_ALBUM" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredFields Name="LABEL_PHOTO" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredFields Name="labelName" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredFields Name="ok" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredFields Name="cancel" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+    <DeclaredFields Name="formType" Path="lancs.mobilemedia.core.ui.screens.NewLabelScreen"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MediaListScreen.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="MediaListScreen" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredMethods Name="initMenu" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="SHOWPHOTO" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="PLAYMUSIC" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="PLAYVIDEO" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="viewCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="playCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="playVideoCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="captureVideoCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="capturePhotoCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="addCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="deleteCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="backCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="editLabelCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="sortCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="favoriteCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="viewFavoritesCommand" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+    <DeclaredFields Name="typeOfScreen" Path="lancs.mobilemedia.core.ui.screens.MediaListScreen"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="CaptureVideoScreen.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="CaptureVideoScreen" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredMethods Name="startCapture" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredMethods Name="pauseCapture" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredMethods Name="getByteArrays" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredMethods Name="takePicture" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredMethods Name="keyPressed" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredMethods Name="paint" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredMethods Name="setVisibleVideo" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="capturePlayer" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="display" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="videoControl" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="rControl" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="byteOfArray" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="start" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="stop" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="takephoto" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="back" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="recording" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="CAPTUREPHOTO" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="CAPTUREVIDEO" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+    <DeclaredFields Name="typescreen" Path="lancs.mobilemedia.core.ui.screens.CaptureVideoScreen"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="AlbumListScreen.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="AlbumListScreen" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredMethods Name="initMenu" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredMethods Name="deleteAll" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredMethods Name="repaintListAlbum" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredFields Name="exitCommand" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredFields Name="exitCommand" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredFields Name="selectCommand" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredFields Name="createAlbumCommand" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredFields Name="deleteAlbumCommand" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+    <DeclaredFields Name="resetCommand" Path="lancs.mobilemedia.core.ui.screens.AlbumListScreen"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="AddMediaToAlbum.java" Path="lancs.mobilemedia.core.ui.screens">
+    <DeclaredMethods Name="AddMediaToAlbum" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredMethods Name="getItemName" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredMethods Name="setItemName" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredMethods Name="getPath" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredMethods Name="setLabePath" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredMethods Name="getItemType" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredMethods Name="getCapturedMedia" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredMethods Name="setCapturedMedia" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredFields Name="labeltxt" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredFields Name="itempathtxt" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredFields Name="itemtype" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredFields Name="CapturedMedia" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredFields Name="ok" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+    <DeclaredFields Name="cancel" Path="lancs.mobilemedia.core.ui.screens.AddMediaToAlbum"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="VideoMediaAccessor.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="VideoMediaAccessor" Path="lancs.mobilemedia.core.ui.datamodel.VideoMediaAccessor"/>
+    <DeclaredMethods Name="resetRecordStore" Path="lancs.mobilemedia.core.ui.datamodel.VideoMediaAccessor"/>
+    <DeclaredMethods Name="addVideoData" Path="lancs.mobilemedia.core.ui.datamodel.VideoMediaAccessor"/>
+    <DeclaredMethods Name="inputStreamToBytes" Path="lancs.mobilemedia.core.ui.datamodel.VideoMediaAccessor"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="VideoAlbumData.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="VideoAlbumData" Path="lancs.mobilemedia.core.ui.datamodel.VideoAlbumData"/>
+    <DeclaredMethods Name="getVideoFromRecordStore" Path="lancs.mobilemedia.core.ui.datamodel.VideoAlbumData"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MusicMediaAccessor.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="MusicMediaAccessor" Path="lancs.mobilemedia.core.ui.datamodel.MusicMediaAccessor"/>
+    <DeclaredMethods Name="MusicMediaAccessor" Path="lancs.mobilemedia.core.ui.datamodel.MusicMediaAccessor"/>
+    <DeclaredMethods Name="getMediaArrayOfByte" Path="lancs.mobilemedia.core.ui.datamodel.MusicMediaAccessor"/>
+    <DeclaredMethods Name="getByteFromMediaInfo" Path="lancs.mobilemedia.core.ui.datamodel.MusicMediaAccessor"/>
+    <DeclaredMethods Name="getMediaFromBytes" Path="lancs.mobilemedia.core.ui.datamodel.MusicMediaAccessor"/>
+    <DeclaredMethods Name="resetRecordStore" Path="lancs.mobilemedia.core.ui.datamodel.MusicMediaAccessor"/>
+    <DeclaredFields Name="converter" Path="lancs.mobilemedia.core.ui.datamodel.MusicMediaAccessor"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MusicAlbumData.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="MusicAlbumData" Path="lancs.mobilemedia.core.ui.datamodel.MusicAlbumData"/>
+    <DeclaredMethods Name="getMusicFromRecordStore" Path="lancs.mobilemedia.core.ui.datamodel.MusicAlbumData"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MediaData.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="MediaData" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="getRecordId" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="setRecordId" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="getForeignRecordId" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="setForeignRecordId" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="getMediaLabel" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="setMediaLabel" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="getParentAlbumName" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="setParentAlbumName" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="toggleFavorite" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="setFavorite" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="isFavorite" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="increaseNumberOfViews" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="getNumberOfViews" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="setNumberOfViews" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="getTypeMedia" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredMethods Name="setTypeMedia" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="recordId" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="foreignRecordId" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="parentAlbumName" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="mediaLabel" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="numberOfViews" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="favorite" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="PHOTO" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="MUSIC" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="VIDEO" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+    <DeclaredFields Name="typemedia" Path="lancs.mobilemedia.core.ui.datamodel.MediaData"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MediaAccessor.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="MediaAccessor" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="loadAlbums" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="resetRecordStore" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="getByteFromMediaInfo" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="getMediaArrayOfByte" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="getMediaFromBytes" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="addMediaData" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="addMediaArrayOfBytes" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="addMediaData" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="loadMediaDataFromRMS" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="updateMediaInfo" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="getMediaInfo" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="setMediaInfo" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="loadMediaBytesFromRMS" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="deleteSingleMediaFromRMS" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="createNewAlbum" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="deleteAlbum" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="getAlbumNames" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="removeRecords" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="getMediaInfoTable" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredMethods Name="setMediaInfoTable" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredFields Name="album_label" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredFields Name="info_label" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredFields Name="default_album_name" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredFields Name="mediaInfoTable" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredFields Name="albumNames" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredFields Name="mediaRS" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+    <DeclaredFields Name="mediaInfoRS" Path="lancs.mobilemedia.core.ui.datamodel.MediaAccessor"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="ImageMediaAccessor.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="ImageMediaAccessor" Path="lancs.mobilemedia.core.ui.datamodel.ImageMediaAccessor"/>
+    <DeclaredMethods Name="resetRecordStore" Path="lancs.mobilemedia.core.ui.datamodel.ImageMediaAccessor"/>
+    <DeclaredMethods Name="getMediaArrayOfByte" Path="lancs.mobilemedia.core.ui.datamodel.ImageMediaAccessor"/>
+    <DeclaredMethods Name="getByteFromMediaInfo" Path="lancs.mobilemedia.core.ui.datamodel.ImageMediaAccessor"/>
+    <DeclaredMethods Name="getMediaFromBytes" Path="lancs.mobilemedia.core.ui.datamodel.ImageMediaAccessor"/>
+    <DeclaredMethods Name="addImageData" Path="lancs.mobilemedia.core.ui.datamodel.ImageMediaAccessor"/>
+    <DeclaredMethods Name="loadSingleImageFromRMS" Path="lancs.mobilemedia.core.ui.datamodel.ImageMediaAccessor"/>
+    <DeclaredFields Name="converter" Path="lancs.mobilemedia.core.ui.datamodel.ImageMediaAccessor"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="ImageAlbumData.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="ImageAlbumData" Path="lancs.mobilemedia.core.ui.datamodel.ImageAlbumData"/>
+    <DeclaredMethods Name="getImageFromRecordStore" Path="lancs.mobilemedia.core.ui.datamodel.ImageAlbumData"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="AlbumData.java" Path="lancs.mobilemedia.core.ui.datamodel">
+    <DeclaredMethods Name="getAlbumNames" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="getMedias" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="createNewAlbum" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="deleteAlbum" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="addNewMediaToAlbum" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="addMediaData" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="deleteMedia" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="resetMediaData" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="getMediaInfo" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="loadMediaDataFromRMS" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="updateMediaInfo" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="loadMediaBytesFromRMS" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="addVideoData" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredMethods Name="addImageData" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+    <DeclaredFields Name="mediaAccessor" Path="lancs.mobilemedia.core.ui.datamodel.AlbumData"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="VideoCaptureController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="VideoCaptureController" Path="lancs.mobilemedia.core.ui.controller.VideoCaptureController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.VideoCaptureController"/>
+    <DeclaredFields Name="pmscreen" Path="lancs.mobilemedia.core.ui.controller.VideoCaptureController"/>
+    <DeclaredFields Name="saveVideoToAlbum" Path="lancs.mobilemedia.core.ui.controller.VideoCaptureController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="SelectMediaController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="SelectMediaController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="getImageController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="setImageController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="getImageAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="setImageAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="getMusicController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="setMusicController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="getMusicAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="setMusicAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="getVideoController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="setVideoController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="getVideoAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="setVideoAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredFields Name="imageController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredFields Name="imageAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredFields Name="musicController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredFields Name="musicAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredFields Name="videoController" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+    <DeclaredFields Name="videoAlbumData" Path="lancs.mobilemedia.core.ui.controller.SelectMediaController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="ScreenSingleton.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="getMainMenu" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredMethods Name="setMainMenu" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredMethods Name="ScreenSingleton" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredMethods Name="getInstance" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredMethods Name="setCurrentScreenName" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredMethods Name="getCurrentScreenName" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredMethods Name="setCurrentStoreName" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredMethods Name="getCurrentStoreName" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredFields Name="instance" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredFields Name="currentScreenName" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredFields Name="currentStoreName" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+    <DeclaredFields Name="mainscreen" Path="lancs.mobilemedia.core.ui.controller.ScreenSingleton"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="PlayVideoController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="PlayVideoController" Path="lancs.mobilemedia.core.ui.controller.PlayVideoController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.PlayVideoController"/>
+    <DeclaredMethods Name="getMediaName" Path="lancs.mobilemedia.core.ui.controller.PlayVideoController"/>
+    <DeclaredMethods Name="setMediaName" Path="lancs.mobilemedia.core.ui.controller.PlayVideoController"/>
+    <DeclaredFields Name="mediaName" Path="lancs.mobilemedia.core.ui.controller.PlayVideoController"/>
+    <DeclaredFields Name="pmscreen" Path="lancs.mobilemedia.core.ui.controller.PlayVideoController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="PhotoViewController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="PhotoViewController" Path="lancs.mobilemedia.core.ui.controller.PhotoViewController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.PhotoViewController"/>
+    <DeclaredMethods Name="getCpVideoScreen" Path="lancs.mobilemedia.core.ui.controller.PhotoViewController"/>
+    <DeclaredMethods Name="setCpVideoScreen" Path="lancs.mobilemedia.core.ui.controller.PhotoViewController"/>
+    <DeclaredFields Name="imageName" Path="lancs.mobilemedia.core.ui.controller.PhotoViewController"/>
+    <DeclaredFields Name="cpVideoScreen" Path="lancs.mobilemedia.core.ui.controller.PhotoViewController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MusicPlayController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="MusicPlayController" Path="lancs.mobilemedia.core.ui.controller.MusicPlayController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.MusicPlayController"/>
+    <DeclaredMethods Name="getMediaName" Path="lancs.mobilemedia.core.ui.controller.MusicPlayController"/>
+    <DeclaredMethods Name="setMediaName" Path="lancs.mobilemedia.core.ui.controller.MusicPlayController"/>
+    <DeclaredFields Name="mediaName" Path="lancs.mobilemedia.core.ui.controller.MusicPlayController"/>
+    <DeclaredFields Name="pmscreen" Path="lancs.mobilemedia.core.ui.controller.MusicPlayController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MediaListController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="MediaListController" Path="lancs.mobilemedia.core.ui.controller.MediaListController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.MediaListController"/>
+    <DeclaredMethods Name="showMediaList" Path="lancs.mobilemedia.core.ui.controller.MediaListController"/>
+    <DeclaredMethods Name="exchange" Path="lancs.mobilemedia.core.ui.controller.MediaListController"/>
+    <DeclaredMethods Name="bubbleSort" Path="lancs.mobilemedia.core.ui.controller.MediaListController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="MediaController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="MediaController" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="playMusicMedia" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="playVideoMedia" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="incrementCountViews" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="updateMedia" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="getSelectedMediaName" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="showImage" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="goToPreviousScreen" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="setMedia" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="getMedia" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="setScreen" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredMethods Name="getScreen" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredFields Name="media" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+    <DeclaredFields Name="screen" Path="lancs.mobilemedia.core.ui.controller.MediaController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="ControllerInterface.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="postCommand" Path="lancs.mobilemedia.core.ui.controller.ControllerInterface"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.ControllerInterface"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="BaseController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="BaseController" Path="lancs.mobilemedia.core.ui.controller.BaseController"/>
+    <DeclaredMethods Name="init" Path="lancs.mobilemedia.core.ui.controller.BaseController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.BaseController"/>
+    <DeclaredMethods Name="goToPreviousScreen" Path="lancs.mobilemedia.core.ui.controller.BaseController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="AlbumController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="AlbumController" Path="lancs.mobilemedia.core.ui.controller.AlbumController"/>
+    <DeclaredMethods Name="handleCommand" Path="lancs.mobilemedia.core.ui.controller.AlbumController"/>
+    <DeclaredMethods Name="resetMediaData" Path="lancs.mobilemedia.core.ui.controller.AlbumController"/>
+    <DeclaredMethods Name="goToPreviousScreen" Path="lancs.mobilemedia.core.ui.controller.AlbumController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="AbstractController.java" Path="lancs.mobilemedia.core.ui.controller">
+    <DeclaredMethods Name="AbstractController" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="postCommand" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="commandAction" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="setAlbumListAsCurrentScreen" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="setCurrentScreen" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="getCurrentScreen" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="setCurrentScreen" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="getAlbumData" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="setAlbumData" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="getNextController" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="setNextController" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="getCurrentStoreName" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredMethods Name="getAlbumListScreen" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredFields Name="midlet" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredFields Name="nextController" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredFields Name="albumData" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+    <DeclaredFields Name="albumListScreen" Path="lancs.mobilemedia.core.ui.controller.AbstractController"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="BaseThread.java" Path="lancs.mobilemedia.core.threads">
+    <DeclaredMethods Name="BaseThread" Path="lancs.mobilemedia.core.threads.BaseThread"/>
+    <DeclaredMethods Name="run" Path="lancs.mobilemedia.core.threads.BaseThread"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="BaseMessaging.java" Path="lancs.mobilemedia.core.comms">
+    <DeclaredMethods Name="sendImage" Path="lancs.mobilemedia.core.comms.BaseMessaging"/>
+    <DeclaredMethods Name="receiveImage" Path="lancs.mobilemedia.core.comms.BaseMessaging"/>
+    <DeclaredMethods Name="cleanUpConnections" Path="lancs.mobilemedia.core.comms.BaseMessaging"/>
+  </AssetsReference>
+</impactanalysismodel:ImpactAnalysisModel>

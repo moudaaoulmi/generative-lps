@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<br.pucrio.inf.les.genarch.models.configuration:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:br.pucrio.inf.les.genarch.models.configuration="http:///ConfigurationMetaModel.ecore">
+  <mappingRelationships>
+    <containers name="src">
+      <components name="lancs" path="src/lancs">
+        <subComponents name="mobilemedia" path="src/lancs/mobilemedia">
+          <subComponents name="core" path="src/lancs/mobilemedia/core">
+            <subComponents name="ui" path="src/lancs/mobilemedia/core/ui">
+              <subComponents name="controller" path="src/lancs/mobilemedia/core/ui/controller">
+                <classes name="PhotoViewController.java" path="src/lancs/mobilemedia/core/ui/controller/PhotoViewController.java">
+                  <featureExpression expression="Core"/>
+                  <Methods name="PhotoViewController" path="src/lancs/mobilemedia/core/ui/controller/PhotoViewController.java" MethodDeclaration="PhotoViewController( MainUIMidlet midlet AlbumData albumData AlbumListScreen albumListScreen String imageName )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="handleCommand" path="src/lancs/mobilemedia/core/ui/controller/PhotoViewController.java" MethodDeclaration="boolean handleCommand( Command c )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="getCpVideoScreen" path="src/lancs/mobilemedia/core/ui/controller/PhotoViewController.java" MethodDeclaration="CaptureVideoScreen getCpVideoScreen( )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="setCpVideoScreen" path="src/lancs/mobilemedia/core/ui/controller/PhotoViewController.java" MethodDeclaration="void setCpVideoScreen( CaptureVideoScreen cpVideoScreen )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Fields name="imageName" path="src/lancs/mobilemedia/core/ui/controller/PhotoViewController.java" FieldDeclaration="String imageName">
+                    <featureExpression expression="core"/>
+                  </Fields>
+                  <Fields name="cpVideoScreen" path="src/lancs/mobilemedia/core/ui/controller/PhotoViewController.java" FieldDeclaration="CaptureVideoScreen cpVideoScreen">
+                    <featureExpression expression="core"/>
+                  </Fields>
+                </classes>
+                <classes name="MusicPlayController.java" path="src/lancs/mobilemedia/core/ui/controller/MusicPlayController.java">
+                  <featureExpression expression="Core"/>
+                  <Methods name="MusicPlayController" path="src/lancs/mobilemedia/core/ui/controller/MusicPlayController.java" MethodDeclaration="MusicPlayController( MainUIMidlet midlet AlbumData albumData List albumListScreen PlayMediaScreen pmscreen )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="handleCommand" path="src/lancs/mobilemedia/core/ui/controller/MusicPlayController.java" MethodDeclaration="boolean handleCommand( Command command )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="getMediaName" path="src/lancs/mobilemedia/core/ui/controller/MusicPlayController.java" MethodDeclaration="String getMediaName( )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="setMediaName" path="src/lancs/mobilemedia/core/ui/controller/MusicPlayController.java" MethodDeclaration="void setMediaName( String mediaName )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Fields name="mediaName" path="src/lancs/mobilemedia/core/ui/controller/MusicPlayController.java" FieldDeclaration="String mediaName">
+                    <featureExpression expression="core"/>
+                  </Fields>
+                  <Fields name="pmscreen" path="src/lancs/mobilemedia/core/ui/controller/MusicPlayController.java" FieldDeclaration="PlayMediaScreen pmscreen">
+                    <featureExpression expression="core"/>
+                  </Fields>
+                </classes>
+                <classes name="MediaListController.java" path="src/lancs/mobilemedia/core/ui/controller/MediaListController.java">
+                  <featureExpression expression="Core"/>
+                  <Methods name="MediaListController" path="src/lancs/mobilemedia/core/ui/controller/MediaListController.java" MethodDeclaration="MediaListController( MainUIMidlet midlet AlbumData albumData AlbumListScreen albumListScreen )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="handleCommand" path="src/lancs/mobilemedia/core/ui/controller/MediaListController.java" MethodDeclaration="boolean handleCommand( Command command )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="showMediaList" path="src/lancs/mobilemedia/core/ui/controller/MediaListController.java" MethodDeclaration="void showMediaList( String recordName boolean sort boolean favorite )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="exchange" path="src/lancs/mobilemedia/core/ui/controller/MediaListController.java" MethodDeclaration="void exchange( MediaData[] medias int pos1 int pos2 )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="bubbleSort" path="src/lancs/mobilemedia/core/ui/controller/MediaListController.java" MethodDeclaration="void bubbleSort( MediaData[] medias )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                </classes>
+                <classes name="MediaController.java" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java">
+                  <featureExpression expression="Core"/>
+                  <Methods name="playMusicMedia" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="boolean playMusicMedia( String selectedMediaName )">
+                    <featureExpression expression="Music"/>
+                    <CodePieces name="[14023,14151]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{14023 , 14151}">
+                      <featureExpression expression="Sorting"/>
+                    </CodePieces>
+                    <CodePieces name="[14727,14868]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{14727 , 14868}">
+                      <featureExpression expression="CopyMedia"/>
+                    </CodePieces>
+                  </Methods>
+                  <Methods name="playVideoMedia" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="boolean playVideoMedia( String selectedMediaName )">
+                    <featureExpression expression="Video"/>
+                    <CodePieces name="[15926,16054]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{15926 , 16054}">
+                      <featureExpression expression="Sorting"/>
+                    </CodePieces>
+                    <CodePieces name="[16664,16805]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{16664 , 16805}">
+                      <featureExpression expression="CopyMedia"/>
+                    </CodePieces>
+                  </Methods>
+                  <Methods name="incrementCountViews" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="void incrementCountViews( String selectedImageName )">
+                    <featureExpression expression="Sorting"/>
+                  </Methods>
+                  <Methods name="showImage" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="void showImage( String name )">
+                    <featureExpression expression="Photo"/>
+                    <CodePieces name="[20668,21088]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{20668 , 21088}">
+                      <featureExpression expression="CopyMedia and SmsFeature"/>
+                    </CodePieces>
+                    <CodePieces name="[21191,21683]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{21191 , 21683}">
+                      <featureExpression expression="SmsFeature"/>
+                    </CodePieces>
+                  </Methods>
+                  <Methods name="MediaController" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="MediaController( MainUIMidlet midlet AlbumData albumData AlbumListScreen albumListScreen )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="handleCommand" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="boolean handleCommand( Command command )">
+                    <featureExpression expression="core"/>
+                    <CodePieces name="[3207,3752]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{3207 , 3752}">
+                      <featureExpression expression="Photo"/>
+                      <CodePieces name="[3483,3611]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{3207 , 3752}.{3483 , 3611}">
+                        <featureExpression expression="Sorting"/>
+                      </CodePieces>
+                    </CodePieces>
+                    <CodePieces name="[3856,4081]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{3856 , 4081}">
+                      <featureExpression expression="Music"/>
+                    </CodePieces>
+                    <CodePieces name="[4191,4421]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{4191 , 4421}">
+                      <featureExpression expression="Video"/>
+                    </CodePieces>
+                    <CodePieces name="[4527,5035]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{4527 , 5035}">
+                      <featureExpression expression="CaptureVideo"/>
+                    </CodePieces>
+                    <CodePieces name="[5139,5682]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{5139 , 5682}">
+                      <featureExpression expression="CapturePhoto"/>
+                    </CodePieces>
+                    <CodePieces name="[6018,6648]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{6018 , 6648}">
+                      <featureExpression expression="Music"/>
+                    </CodePieces>
+                    <CodePieces name="[7629,7984]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{7629 , 7984}">
+                      <featureExpression expression="Music"/>
+                    </CodePieces>
+                    <CodePieces name="[9941,10281]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{9941 , 10281}">
+                      <featureExpression expression="Sorting"/>
+                    </CodePieces>
+                    <CodePieces name="[10392,12288]" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java.{10392 , 12288}">
+                      <featureExpression expression="Favourites"/>
+                    </CodePieces>
+                  </Methods>
+                  <Methods name="updateMedia" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="void updateMedia( MediaData media )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="getSelectedMediaName" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="String getSelectedMediaName( )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="goToPreviousScreen" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="boolean goToPreviousScreen( )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="setMedia" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="void setMedia( MediaData media )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="getMedia" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="MediaData getMedia( )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="setScreen" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="void setScreen( NewLabelScreen screen )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="getScreen" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" MethodDeclaration="NewLabelScreen getScreen( )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Fields name="media" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" FieldDeclaration="MediaData media">
+                    <featureExpression expression="core"/>
+                  </Fields>
+                  <Fields name="screen" path="src/lancs/mobilemedia/core/ui/controller/MediaController.java" FieldDeclaration="NewLabelScreen screen">
+                    <featureExpression expression="core"/>
+                  </Fields>
+                </classes>
+                <classes name="ControllerInterface.java" path="src/lancs/mobilemedia/core/ui/controller/ControllerInterface.java">
+                  <featureExpression expression="Core"/>
+                  <Methods name="postCommand" path="src/lancs/mobilemedia/core/ui/controller/ControllerInterface.java" MethodDeclaration="void postCommand( Command command )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="handleCommand" path="src/lancs/mobilemedia/core/ui/controller/ControllerInterface.java" MethodDeclaration="boolean handleCommand( Command command )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                </classes>
+                <classes name="BaseController.java" path="src/lancs/mobilemedia/core/ui/controller/BaseController.java">
+                  <featureExpression expression="Core"/>
+                  <Methods name="BaseController" path="src/lancs/mobilemedia/core/ui/controller/BaseController.java" MethodDeclaration="BaseController( MainUIMidlet midlet AlbumData model AlbumListScreen albumListScreen )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="init" path="src/lancs/mobilemedia/core/ui/controller/BaseController.java" MethodDeclaration="void init( AlbumData model )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="handleCommand" path="src/lancs/mobilemedia/core/ui/controller/BaseController.java" MethodDeclaration="boolean handleCommand( Command command )">
+                    <featureExpression expression="core"/>
+                  </Methods>
+                  <Methods name="goToPreviousScreen" path="src/lancs/mobilemedia/core/ui/controller/BaseController.java" MethodDeclaration="boolean goToPreviousScreen( )">
+                    <featureExpression expression="core"/>
+                    <CodePieces name="[4041,4323]" path="src/lancs/mobilemedia/core/ui/controller/BaseController.java.{4041 , 4323}">
+                      <featureExpression expression="Photo and Music"/>
+                    </CodePieces>
+                  </Methods>
+                </classes>
+              </subComponents>
+            </subComponents>
+            <subComponents name="comms" path="src/lancs/mobilemedia/core/comms">
+              <classes name="BaseMessaging.java" path="src/lancs/mobilemedia/core/comms/BaseMessaging.java">
+                <featureExpression expression="SmsFeature"/>
+                <Methods name="sendImage" path="src/lancs/mobilemedia/core/comms/BaseMessaging.java" MethodDeclaration="boolean sendImage( byte[] imageData )">
+                  <featureExpression expression="core"/>
+                </Methods>
+                <Methods name="receiveImage" path="src/lancs/mobilemedia/core/comms/BaseMessaging.java" MethodDeclaration="byte[] receiveImage( )">
+                  <featureExpression expression="core"/>
+                </Methods>
+                <Methods name="cleanUpConnections" path="src/lancs/mobilemedia/core/comms/BaseMessaging.java" MethodDeclaration="void cleanUpConnections( MessageConnection conn )">
+                  <featureExpression expression="core"/>
+                </Methods>
+              </classes>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+      </components>
+    </containers>
+  </mappingRelationships>
+</br.pucrio.inf.les.genarch.models.configuration:Configuration>

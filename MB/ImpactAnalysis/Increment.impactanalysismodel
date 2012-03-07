@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impactanalysismodel:ImpactAnalysisModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:impactanalysismodel="http://impactanalysismodel/1.0">
+  <FeaturesReference Name="MB" Type="Mandatory">
+    <FeatureChild Name="Operacao" Type="Mandatory">
+      <FeatureChild Name="Subtracao" Type="Mandatory"/>
+      <FeatureChild Name="Operador" Type="Mandatory"/>
+      <FeatureChild Name="Multiplicacao" Type="Mandatory"/>
+      <FeatureChild Name="Divisao" Type="Mandatory"/>
+      <FeatureChild Name="Adicao" Type="Mandatory">
+        <FeatureChild Name="Feature1"/>
+        <FeatureChild Name="Feature2"/>
+      </FeatureChild>
+    </FeatureChild>
+    <FeatureChild Name="GrandeTeste" Type="Mandatory"/>
+    <FeatureChild Name="Teste" Type="Mandatory"/>
+    <FeatureChild Name="Verificador" Type="Mandatory">
+      <FeatureChild Name="VerificadorAdicao"/>
+      <FeatureChild Name="VerificadorSubtracao"/>
+    </FeatureChild>
+    <FeatureChild Name="Consultoria" Type="Mandatory"/>
+  </FeaturesReference>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.0" Assets="//@AssetsReference.0"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.1 //@FeaturesReference.0/@FeatureChild.1" Assets="//@AssetsReference.0/@DeclaredMethods.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.0 //@FeaturesReference.0/@FeatureChild.2" Assets="//@AssetsReference.0/@DeclaredMethods.2"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.2 //@FeaturesReference.0/@FeatureChild.2" Assets="//@AssetsReference.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.2 //@FeaturesReference.0/@FeatureChild.2" Assets="//@AssetsReference.1/@DeclaredMethods.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.3 //@FeaturesReference.0/@FeatureChild.2" Assets="//@AssetsReference.2"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.3 //@FeaturesReference.0/@FeatureChild.2" Assets="//@AssetsReference.2/@DeclaredMethods.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.4 //@FeaturesReference.0/@FeatureChild.2" Assets="//@AssetsReference.3"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.4 //@FeaturesReference.0/@FeatureChild.2" Assets="//@AssetsReference.3/@DeclaredMethods.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.0" Assets="//@AssetsReference.5" UseCases="//@UseCasesReference.5"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.0" Assets="//@AssetsReference.5/@DeclaredMethods.0" UseCases="//@UseCasesReference.6"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.2" Assets="//@AssetsReference.6"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.2" Assets="//@AssetsReference.6/@DeclaredMethods.0"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.3" Assets="//@AssetsReference.7" UseCases="//@UseCasesReference.7"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.3" Assets="//@AssetsReference.7/@DeclaredMethods.0"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.3" Assets="//@AssetsReference.7/@DeclaredMethods.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.4" Assets="//@AssetsReference.8" UseCases="//@UseCasesReference.8"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.4" Assets="//@AssetsReference.8/@DeclaredMethods.0" UseCases="//@UseCasesReference.10"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0/@FeatureChild.4/@FeatureChild.0 //@FeaturesReference.0/@FeatureChild.0/@FeatureChild.4/@FeatureChild.1" Assets="//@AssetsReference.8/@DeclaredFields.0" UseCases="//@UseCasesReference.9"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9/@DeclaredMethods.0"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9/@DeclaredMethods.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9/@DeclaredMethods.2"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9/@DeclaredMethods.3"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9/@DeclaredMethods.4"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9/@DeclaredMethods.5"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9/@DeclaredFields.0"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.0" Assets="//@AssetsReference.9/@DeclaredFields.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.3" Assets="//@AssetsReference.11" UseCases="//@UseCasesReference.0"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.3/@FeatureChild.0" Assets="//@AssetsReference.11/@DeclaredMethods.0" UseCases="//@UseCasesReference.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.3/@FeatureChild.1" Assets="//@AssetsReference.11/@DeclaredMethods.1" UseCases="//@UseCasesReference.2"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.3/@FeatureChild.1" Assets="//@AssetsReference.11/@DeclaredMethods.2" UseCases="//@UseCasesReference.3"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.4" Assets="//@AssetsReference.16" UseCases="//@UseCasesReference.4"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.4" Assets="//@AssetsReference.16/@DeclaredMethods.0"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.4" Assets="//@AssetsReference.16/@DeclaredMethods.1"/>
+  <MappingsReference Features="//@FeaturesReference.0/@FeatureChild.4" Assets="//@AssetsReference.16/@DeclaredFields.0"/>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoSubtracaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste">
+    <DeclaredMethods Name="OperacaoSubtracaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste"/>
+    <DeclaredMethods Name="consultoria" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Dependencies="//@AssetsReference.9/@DeclaredMethods.1 //@AssetsReference.9/@DeclaredMethods.5 //@AssetsReference.9/@DeclaredMethods.0 //@AssetsReference.9 //@AssetsReference.5 //@AssetsReference.0"/>
+    <DeclaredMethods Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Dependencies="//@AssetsReference.9/@DeclaredMethods.1 //@AssetsReference.9/@DeclaredMethods.5 //@AssetsReference.9/@DeclaredMethods.0 //@AssetsReference.9 //@AssetsReference.5 //@AssetsReference.0"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoMultiplicacaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste">
+    <DeclaredMethods Name="OperacaoMultiplicacaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoMultiplicacaoTeste"/>
+    <DeclaredMethods Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoMultiplicacaoTeste" Dependencies="//@AssetsReference.9/@DeclaredMethods.1 //@AssetsReference.9/@DeclaredMethods.5 //@AssetsReference.9/@DeclaredMethods.0 //@AssetsReference.9 //@AssetsReference.6 //@AssetsReference.1"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoDivisaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste">
+    <DeclaredMethods Name="OperacaoDivisaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoDivisaoTeste"/>
+    <DeclaredMethods Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoDivisaoTeste" Dependencies="//@AssetsReference.9/@DeclaredMethods.1 //@AssetsReference.9/@DeclaredMethods.5 //@AssetsReference.9/@DeclaredMethods.0 //@AssetsReference.9 //@AssetsReference.7 //@AssetsReference.2"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoAdicaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste">
+    <DeclaredMethods Name="OperacaoAdicaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoAdicaoTeste"/>
+    <DeclaredMethods Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoAdicaoTeste" Dependencies="//@AssetsReference.9/@DeclaredMethods.5 //@AssetsReference.9/@DeclaredMethods.1 //@AssetsReference.9/@DeclaredMethods.0 //@AssetsReference.9 //@AssetsReference.3 //@AssetsReference.8"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="Jgms.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui">
+    <DeclaredMethods Name="Jgms" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredMethods.1 //@AssetsReference.4/@DeclaredFields.0 //@AssetsReference.4/@DeclaredFields.2 //@AssetsReference.4/@DeclaredFields.3 //@AssetsReference.4/@DeclaredFields.5 //@AssetsReference.4/@DeclaredFields.4 //@AssetsReference.4/@DeclaredFields.1 //@AssetsReference.4/@DeclaredFields.6 //@AssetsReference.4"/>
+    <DeclaredMethods Name="initialize" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredMethods.2 //@AssetsReference.4"/>
+    <DeclaredMethods Name="getJContentPane" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredMethods.3 //@AssetsReference.4/@DeclaredFields.0 //@AssetsReference.4"/>
+    <DeclaredMethods Name="addComponents" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredMethods.6 //@AssetsReference.4/@DeclaredMethods.4 //@AssetsReference.4/@DeclaredMethods.8 //@AssetsReference.4/@DeclaredMethods.9 //@AssetsReference.4/@DeclaredMethods.5 //@AssetsReference.4/@DeclaredMethods.7 //@AssetsReference.4/@DeclaredFields.0 //@AssetsReference.4"/>
+    <DeclaredMethods Name="getTermoUmLbl" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredFields.4 //@AssetsReference.4"/>
+    <DeclaredMethods Name="getTermoDoisLbl" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredFields.5 //@AssetsReference.4"/>
+    <DeclaredMethods Name="getResultadoLbl" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredFields.6 //@AssetsReference.4"/>
+    <DeclaredMethods Name="getTermoUmField" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredFields.1 //@AssetsReference.4"/>
+    <DeclaredMethods Name="getTermoDoisField" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredFields.2 //@AssetsReference.4"/>
+    <DeclaredMethods Name="getResultadoField" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredFields.3 //@AssetsReference.4"/>
+    <DeclaredMethods Name="main" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4/@DeclaredMethods.0 //@AssetsReference.4"/>
+    <DeclaredFields Name="jContentPane" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4"/>
+    <DeclaredFields Name="termoUmField" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4"/>
+    <DeclaredFields Name="termoDoisField" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4"/>
+    <DeclaredFields Name="resultadoField" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4"/>
+    <DeclaredFields Name="termoUmLbl" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4"/>
+    <DeclaredFields Name="termoDoisLbl" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4"/>
+    <DeclaredFields Name="resultadoLbl" Path="br.pucrio.inf.les.genarch.exemplos.ms.ui.Jgms" Dependencies="//@AssetsReference.4"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoSubtracao.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework" Dependencies="//@AssetsReference.9">
+    <DeclaredMethods Name="resultado" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoSubtracao" Dependencies="//@AssetsReference.9/@DeclaredMethods.3 //@AssetsReference.9/@DeclaredMethods.2 //@AssetsReference.9"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoMultiplicacao.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework" Dependencies="//@AssetsReference.9">
+    <DeclaredMethods Name="resultado" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoMultiplicacao" Dependencies="//@AssetsReference.9/@DeclaredMethods.3 //@AssetsReference.9/@DeclaredMethods.2 //@AssetsReference.9"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoDivisao.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework" Dependencies="//@AssetsReference.9">
+    <DeclaredMethods Name="resultado" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoDivisao" Dependencies="//@AssetsReference.9/@DeclaredMethods.3 //@AssetsReference.9/@DeclaredMethods.2 //@AssetsReference.9"/>
+    <DeclaredMethods Name="getOperacaoAdicao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoDivisao" Dependencies="//@AssetsReference.8"/>
+    <DeclaredFields Name="opAd" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoDivisao" Dependencies="//@AssetsReference.7 //@AssetsReference.8"/>
+    <DeclaredFields Name="opAd2" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoDivisao" Dependencies="//@AssetsReference.7 //@AssetsReference.8"/>
+    <DeclaredFields Name="classeStatic" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoDivisao" Dependencies="//@AssetsReference.7 //@AssetsReference.10"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoAdicao.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework" Dependencies="//@AssetsReference.9">
+    <DeclaredMethods Name="resultado" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoAdicao" Dependencies="//@AssetsReference.9/@DeclaredMethods.3 //@AssetsReference.9/@DeclaredMethods.2 //@AssetsReference.9"/>
+    <DeclaredFields Name="testeField" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.OperacaoAdicao" Dependencies="//@AssetsReference.8"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="Operacao.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework">
+    <DeclaredMethods Name="setTermoUm" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao" Dependencies="//@AssetsReference.9/@DeclaredFields.0 //@AssetsReference.9"/>
+    <DeclaredMethods Name="setTermoDois" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao" Dependencies="//@AssetsReference.9/@DeclaredFields.1 //@AssetsReference.9"/>
+    <DeclaredMethods Name="getTermoUm" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao" Dependencies="//@AssetsReference.9/@DeclaredFields.0 //@AssetsReference.9"/>
+    <DeclaredMethods Name="getTermoDois" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao" Dependencies="//@AssetsReference.9/@DeclaredFields.1 //@AssetsReference.9"/>
+    <DeclaredMethods Name="testeOpcional" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao" Dependencies="//@AssetsReference.11/@DeclaredMethods.1 //@AssetsReference.9/@DeclaredFields.1 //@AssetsReference.9 //@AssetsReference.11"/>
+    <DeclaredMethods Name="resultado" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao"/>
+    <DeclaredFields Name="termoUm" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao" Dependencies="//@AssetsReference.9"/>
+    <DeclaredFields Name="termoDois" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao" Dependencies="//@AssetsReference.9"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="ClasseStatic.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework">
+    <DeclaredMethods Name="getOperacaoAdicao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.ClasseStatic" Dependencies="//@AssetsReference.8"/>
+    <DeclaredMethods Name="getTeste" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.ClasseStatic"/>
+    <DeclaredMethods Name="setTeste2" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.ClasseStatic" Dependencies="//@AssetsReference.10/@DeclaredFields.1 //@AssetsReference.10"/>
+    <DeclaredMethods Name="getTeste2" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.ClasseStatic" Dependencies="//@AssetsReference.10/@DeclaredFields.1 //@AssetsReference.10"/>
+    <DeclaredFields Name="teste" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.ClasseStatic" Dependencies="//@AssetsReference.10"/>
+    <DeclaredFields Name="teste2" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.ClasseStatic" Dependencies="//@AssetsReference.10"/>
+    <DeclaredFields Name="teste3" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.ClasseStatic" Dependencies="//@AssetsReference.10"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="Verificador.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus">
+    <DeclaredMethods Name="verificaAdicao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Dependencies="//@AssetsReference.11/@DeclaredFields.0 //@AssetsReference.3 //@AssetsReference.11"/>
+    <DeclaredMethods Name="verificaSubtracao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Dependencies="//@AssetsReference.11/@DeclaredFields.1 //@AssetsReference.11 //@AssetsReference.0"/>
+    <DeclaredMethods Name="verificaSubtracaoAlfa" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Dependencies="//@AssetsReference.11/@DeclaredMethods.1 //@AssetsReference.11"/>
+    <DeclaredFields Name="testeAdicao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Dependencies="//@AssetsReference.11 //@AssetsReference.3"/>
+    <DeclaredFields Name="testeSubtracao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Dependencies="//@AssetsReference.11 //@AssetsReference.0"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="Rock.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus" Dependencies="//@AssetsReference.15">
+    <DeclaredMethods Name="abstractMethod" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rock"/>
+    <DeclaredMethods Name="volume" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rock"/>
+    <DeclaredMethods Name="killTheName" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rock"/>
+    <DeclaredMethods Name="nuclearBomb" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rock" Dependencies="//@AssetsReference.11"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="Rage.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus" Dependencies="//@AssetsReference.14">
+    <DeclaredMethods Name="killTheName" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rage" Dependencies="//@AssetsReference.10"/>
+    <DeclaredMethods Name="nuclearBomb" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rage" Dependencies="//@AssetsReference.11"/>
+    <DeclaredMethods Name="stones" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rage" Dependencies="//@AssetsReference.12/@DeclaredMethods.1 //@AssetsReference.12 //@AssetsReference.11 //@AssetsReference.16"/>
+    <DeclaredFields Name="testaAtributo" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rage" Dependencies="//@AssetsReference.13"/>
+    <DeclaredFields Name="testaAtributo2" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Rage" Dependencies="//@AssetsReference.13 //@AssetsReference.11"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="PontoInterface.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus">
+    <DeclaredMethods Name="killTheName" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.PontoInterface"/>
+    <DeclaredMethods Name="nuclearBomb" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.PontoInterface" Dependencies="//@AssetsReference.11"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="Music.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus">
+    <DeclaredMethods Name="abstractMethod" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Music"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="Consultoria.java" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus">
+    <DeclaredMethods Name="realizaConsultoria1" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Consultoria" Dependencies="//@AssetsReference.11/@DeclaredMethods.0 //@AssetsReference.16/@DeclaredFields.0 //@AssetsReference.11 //@AssetsReference.16"/>
+    <DeclaredMethods Name="realizaConsultoria2" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Consultoria" Dependencies="//@AssetsReference.16/@DeclaredMethods.0 //@AssetsReference.16"/>
+    <DeclaredFields Name="vf" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Consultoria" Dependencies="//@AssetsReference.16 //@AssetsReference.11"/>
+  </AssetsReference>
+  <UseCasesReference Name="VerificadorUC"/>
+  <UseCasesReference Name="VerificadorAdicaoUC"/>
+  <UseCasesReference Name="VerificadorSubtracaoUC"/>
+  <UseCasesReference Name="VerificadorSubtracaoUC"/>
+  <UseCasesReference Name="ConsultoriaUC"/>
+  <UseCasesReference Name="classOpeSubUC"/>
+  <UseCasesReference Name="metodoResultadoUC"/>
+  <UseCasesReference Name="DivisaoUC"/>
+  <UseCasesReference Name="SomarUC"/>
+  <UseCasesReference Name="testeFieldUC"/>
+  <UseCasesReference Name="metodoResultadoUC"/>
+</impactanalysismodel:ImpactAnalysisModel>
