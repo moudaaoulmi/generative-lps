@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="lib" path="lib/designwizard-1.4.jar"/>
+	<classpathentry kind="src" path="src-br.pucrio.inf.les.genarch"/>
+	<classpathentry exported="true" kind="lib" path="lib/js-14.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/featuremodel.jar"/>
+	<classpathentry exported="true" kind="lib" path="java-cup-11a.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/JFlex.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ca.uwaterloo.gp.fmp"/>
+	<classpathentry exported="true" kind="lib" path="lib/genarchannotations.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
