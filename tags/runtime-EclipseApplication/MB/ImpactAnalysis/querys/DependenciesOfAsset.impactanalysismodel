@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impactanalysismodel:ImpactAnalysisModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:impactanalysismodel="http://impactanalysismodel/1.0">
+  <FeaturesReference Name="Subtracao" Type="Mandatory">
+    <Constraints href="../ImpactAnalysisModel.impactanalysismodel#//@ConstraintsReference.0"/>
+  </FeaturesReference>
+</impactanalysismodel:ImpactAnalysisModel>

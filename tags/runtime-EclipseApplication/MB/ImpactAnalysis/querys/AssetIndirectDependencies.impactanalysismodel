@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impactanalysismodel:ImpactAnalysisModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:impactanalysismodel="http://impactanalysismodel/1.0">
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoSubtracaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste" Signature="br.pucrio.inf.les.genarch.exemplos.teste OperacaoSubtracaoTeste.java" Modifiers="PUBLIC ">
+    <DeclaredMethods Name="OperacaoSubtracaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste OperacaoSubtracaoTeste " ReturnType="void" Modifiers="PUBLIC " Arguments=""/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Field" Name="testeSubtracao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador testeSubtracao" Modifiers="PACKAGE ">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.10"/>
+    <Dependencies href="#//@AssetsReference.0"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="consultoria" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste consultoria " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8/@DeclaredMethods.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8/@DeclaredMethods.4"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8/@DeclaredMethods.0"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.4"/>
+    <Dependencies href="#//@AssetsReference.0"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste testResultado " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8/@DeclaredMethods.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8/@DeclaredMethods.4"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8/@DeclaredMethods.0"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.4"/>
+    <Dependencies href="#//@AssetsReference.0"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="verificaSubtracao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador verificaSubtracao " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="#//@AssetsReference.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.10"/>
+    <Dependencies href="#//@AssetsReference.0"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="testeOpcional" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao testeOpcional " ReturnType="float" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="#//@AssetsReference.4"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8/@DeclaredFields.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.10"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="verificaSubtracaoAlfa" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador verificaSubtracaoAlfa " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="#//@AssetsReference.4"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.10"/>
+  </AssetsReference>
+</impactanalysismodel:ImpactAnalysisModel>

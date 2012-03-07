@@ -1,0 +1,11 @@
+Análise apresenta ligações com artefatos relacionados apenas com features opcionais,
+ das quais não existe restrições para a inclusão de alguma das features
+
+
+Operacao -> 
+br.pucrio.inf.les.genarch.exemplos.ms.framework.Operacao - testeOpcional -> 
+br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador - verificaSubtracao
+
+Consultoria -> 
+br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Consultoria - realizaConsultoria1 -> 
+br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador - verificaAdicao

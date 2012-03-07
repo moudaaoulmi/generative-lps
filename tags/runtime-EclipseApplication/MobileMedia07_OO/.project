@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>MobileMedia07_OO</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>br.pucrio.inf.les.genarch.genarchnature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.atlassw.tools.eclipse.checkstyle.CheckstyleNature</nature>
+		<nature>eclipseme.core.nature</nature>
+		<nature>antenna.eclipse.preprocessor.appNature</nature>
+	</natures>
+</projectDescription>

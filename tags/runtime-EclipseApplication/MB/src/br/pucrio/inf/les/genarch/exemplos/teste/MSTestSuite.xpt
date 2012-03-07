@@ -1,0 +1,25 @@
+«IMPORT br::pucrio::inf::les::genarch::models::instance»
+«EXTENSION br::pucrio::inf::les::genarch::models::Model»
+«DEFINE Main FOR Instance»
+«FILE "MSTestSuite.java"»
+«LET feature("Operacao",featureInstance) AS	operacaoFeature»
+package br.pucrio.inf.les.genarch.exemplos.teste;
+
+import junit.framework.Test;
+import junit.framework.TestSuite;
+
+public class MSTestSuite extends TestSuite {
+	public static Test suite() {
+		TestSuite suite = new TestSuite();
+		«FOREACH operacaoFeature.features AS child»
+		«LET fragment(child.name,architecture) AS fragment»
+		//«fragment.content»
+		«ENDLET»
+		suite.addTestSuite(Operacao«child.name»Teste.class);		
+		«ENDFOREACH»
+		return suite;
+	}
+}
+«ENDLET»
+«ENDFILE»
+«ENDDEFINE»

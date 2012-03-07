@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<impactanalysismodel:ImpactAnalysisModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:impactanalysismodel="http://impactanalysismodel/1.0">
+  <FeaturesReference Name="Subtracao" Type="Mandatory">
+    <Constraints href="../ImpactAnalysisModel.impactanalysismodel#//@ConstraintsReference.0"/>
+  </FeaturesReference>
+  <FeaturesReference Name="Teste" Type="Mandatory"/>
+  <FeaturesReference Name="Multiplicacao" Type="Mandatory"/>
+  <FeaturesReference Name="Divisao" Type="Mandatory"/>
+  <FeaturesReference Name="Adicao" Type="Mandatory">
+    <FeatureChild Name="Feature1"/>
+    <FeatureChild Name="Feature2"/>
+  </FeaturesReference>
+  <FeaturesReference Name="VerificadorAdicao"/>
+  <FeaturesReference Name="Consultoria" Type="Mandatory"/>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoSubtracaoTeste testResultado " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.5"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.0"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.2"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.0"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoMultiplicacaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste" Signature="br.pucrio.inf.les.genarch.exemplos.teste OperacaoMultiplicacaoTeste.java" Modifiers="PUBLIC ">
+    <DeclaredMethods Name="OperacaoMultiplicacaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoMultiplicacaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoMultiplicacaoTeste OperacaoMultiplicacaoTeste " ReturnType="void" Modifiers="PUBLIC " Arguments=""/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoMultiplicacaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoMultiplicacaoTeste testResultado " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.5"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.0"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.3"/>
+    <Dependencies href="#//@AssetsReference.1"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoDivisaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste" Signature="br.pucrio.inf.les.genarch.exemplos.teste OperacaoDivisaoTeste.java" Modifiers="PUBLIC ">
+    <DeclaredMethods Name="OperacaoDivisaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoDivisaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoDivisaoTeste OperacaoDivisaoTeste " ReturnType="void" Modifiers="PUBLIC " Arguments=""/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoDivisaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoDivisaoTeste testResultado " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.5"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.0"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.4"/>
+    <Dependencies href="#//@AssetsReference.3"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Class" Name="OperacaoAdicaoTeste.java" Path="br.pucrio.inf.les.genarch.exemplos.teste" Signature="br.pucrio.inf.les.genarch.exemplos.teste OperacaoAdicaoTeste.java" Modifiers="PUBLIC ">
+    <DeclaredMethods Name="OperacaoAdicaoTeste" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoAdicaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoAdicaoTeste OperacaoAdicaoTeste " ReturnType="void" Modifiers="PUBLIC " Arguments=""/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="testResultado" Path="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoAdicaoTeste" Signature="br.pucrio.inf.les.genarch.exemplos.teste.OperacaoAdicaoTeste testResultado " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.5"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.1"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6/@DeclaredMethods.0"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.6"/>
+    <Dependencies href="#//@AssetsReference.5"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.5"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Field" Name="testeAdicao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador testeAdicao" Modifiers="PACKAGE ">
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8"/>
+    <Dependencies href="#//@AssetsReference.5"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="verificaAdicao" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Verificador verificaAdicao " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="#//@AssetsReference.7"/>
+    <Dependencies href="#//@AssetsReference.5"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="realizaConsultoria1" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Consultoria" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Consultoria realizaConsultoria1 " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="#//@AssetsReference.8"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.13/@DeclaredFields.0"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.8"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.13"/>
+  </AssetsReference>
+  <AssetsReference xsi:type="impactanalysismodel:Method" Name="realizaConsultoria2" Path="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Consultoria" Signature="br.pucrio.inf.les.genarch.exemplos.ms.framework.plus.Consultoria realizaConsultoria2 " ReturnType="void" Modifiers="PUBLIC " Arguments="">
+    <Dependencies href="#//@AssetsReference.9"/>
+    <Dependencies href="../ImpactAnalysisModel.impactanalysismodel#//@AssetsReference.13"/>
+  </AssetsReference>
+</impactanalysismodel:ImpactAnalysisModel>

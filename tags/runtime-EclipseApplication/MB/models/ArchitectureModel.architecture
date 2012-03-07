@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<br.pucrio.inf.les.genarch.models.architecture:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:br.pucrio.inf.les.genarch.models.architecture="http:///ArchitectureMetaModel.ecore">
+  <containers name="src">
+    <components name="br" path="src/br">
+      <subComponents name="pucrio" path="src/br/pucrio">
+        <subComponents name="inf" path="src/br/pucrio/inf">
+          <subComponents name="les" path="src/br/pucrio/inf/les">
+            <subComponents name="genarch" path="src/br/pucrio/inf/les/genarch">
+              <subComponents name="exemplos" path="src/br/pucrio/inf/les/genarch/exemplos">
+                <subComponents name="teste" path="src/br/pucrio/inf/les/genarch/exemplos/teste">
+                  <classes name="OperacaoSubtracaoTeste.java" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoSubtracaoTeste.java">
+                    <MethodRef name="OperacaoSubtracaoTeste" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoSubtracaoTeste.java" MethodDeclaration="OperacaoSubtracaoTeste( )"/>
+                    <MethodRef name="consultoria" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoSubtracaoTeste.java" MethodDeclaration="void consultoria( )"/>
+                    <MethodRef name="testResultado" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoSubtracaoTeste.java" MethodDeclaration="void testResultado( )"/>
+                  </classes>
+                  <classes name="OperacaoMultiplicacaoTeste.java" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoMultiplicacaoTeste.java">
+                    <MethodRef name="OperacaoMultiplicacaoTeste" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoMultiplicacaoTeste.java" MethodDeclaration="OperacaoMultiplicacaoTeste( )"/>
+                    <MethodRef name="testResultado" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoMultiplicacaoTeste.java" MethodDeclaration="void testResultado( )"/>
+                  </classes>
+                  <classes name="OperacaoDivisaoTeste.java" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoDivisaoTeste.java">
+                    <MethodRef name="OperacaoDivisaoTeste" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoDivisaoTeste.java" MethodDeclaration="OperacaoDivisaoTeste( )"/>
+                    <MethodRef name="testResultado" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoDivisaoTeste.java" MethodDeclaration="void testResultado( )"/>
+                  </classes>
+                  <classes name="OperacaoAdicaoTeste.java" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoAdicaoTeste.java">
+                    <MethodRef name="OperacaoAdicaoTeste" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoAdicaoTeste.java" MethodDeclaration="OperacaoAdicaoTeste( )"/>
+                    <MethodRef name="testResultado" path="src/br/pucrio/inf/les/genarch/exemplos/teste/OperacaoAdicaoTeste.java" MethodDeclaration="void testResultado( )"/>
+                  </classes>
+                  <templates name="MSTestSuite.xpt" path="src/br/pucrio/inf/les/genarch/exemplos/teste/MSTestSuite.xpt" generationPath="src/br/pucrio/inf/les/genarch/exemplos/teste"/>
+                </subComponents>
+                <subComponents name="ms" path="src/br/pucrio/inf/les/genarch/exemplos/ms">
+                  <subComponents name="ui" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui">
+                    <classes name="Jgms.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java">
+                      <MethodRef name="Jgms" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="Jgms( )"/>
+                      <MethodRef name="initialize" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="void initialize( String name )"/>
+                      <MethodRef name="getJContentPane" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="JPanel getJContentPane( )"/>
+                      <MethodRef name="addComponents" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="void addComponents( )"/>
+                      <MethodRef name="getTermoUmLbl" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="JLabel getTermoUmLbl( )"/>
+                      <MethodRef name="getTermoDoisLbl" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="JLabel getTermoDoisLbl( )"/>
+                      <MethodRef name="getResultadoLbl" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="JLabel getResultadoLbl( )"/>
+                      <MethodRef name="getTermoUmField" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="JTextField getTermoUmField( )"/>
+                      <MethodRef name="getTermoDoisField" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="JTextField getTermoDoisField( )"/>
+                      <MethodRef name="getResultadoField" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="JTextField getResultadoField( )"/>
+                      <MethodRef name="main" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" MethodDeclaration="void main( String[] args )"/>
+                      <AttributeRef name="jContentPane" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" AttributDeclaration="JPanel jContentPane"/>
+                      <AttributeRef name="termoUmField" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" AttributDeclaration="JTextField termoUmField"/>
+                      <AttributeRef name="termoDoisField" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" AttributDeclaration="JTextField termoDoisField"/>
+                      <AttributeRef name="resultadoField" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" AttributDeclaration="JTextField resultadoField"/>
+                      <AttributeRef name="termoUmLbl" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" AttributDeclaration="JLabel termoUmLbl"/>
+                      <AttributeRef name="termoDoisLbl" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" AttributDeclaration="JLabel termoDoisLbl"/>
+                      <AttributeRef name="resultadoLbl" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/Jgms.java" AttributDeclaration="JLabel resultadoLbl"/>
+                    </classes>
+                    <subComponents name="aspects" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/aspects">
+                      <aspects name="OperacaoSubtracaoUI.aj" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/aspects/OperacaoSubtracaoUI.aj"/>
+                      <aspects name="OperacaoMultiplicacaoUI.aj" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/aspects/OperacaoMultiplicacaoUI.aj"/>
+                      <aspects name="OperacaoDivisaoUI.aj" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/aspects/OperacaoDivisaoUI.aj"/>
+                      <aspects name="OperacaoAdicaoUI.aj" path="src/br/pucrio/inf/les/genarch/exemplos/ms/ui/aspects/OperacaoAdicaoUI.aj"/>
+                    </subComponents>
+                  </subComponents>
+                  <subComponents name="framework" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework">
+                    <classes name="OperacaoSubtracao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoSubtracao.java">
+                      <MethodRef name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoSubtracao.java" MethodDeclaration="float resultado( )"/>
+                    </classes>
+                    <classes name="OperacaoMultiplicacao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoMultiplicacao.java">
+                      <MethodRef name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoMultiplicacao.java" MethodDeclaration="float resultado( )"/>
+                    </classes>
+                    <classes name="OperacaoDivisao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java">
+                      <MethodRef name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java" MethodDeclaration="float resultado( )"/>
+                      <MethodRef name="getOperacaoAdicao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java" MethodDeclaration="OperacaoAdicao getOperacaoAdicao( )"/>
+                      <AttributeRef name="opAd" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java" AttributDeclaration="OperacaoAdicao opAd"/>
+                      <AttributeRef name="opAd2" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java" AttributDeclaration="OperacaoAdicao opAd2"/>
+                      <AttributeRef name="classeStatic" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoDivisao.java" AttributDeclaration="ClasseStatic classeStatic"/>
+                    </classes>
+                    <classes name="OperacaoAdicao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoAdicao.java">
+                      <MethodRef name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoAdicao.java" MethodDeclaration="float resultado( )"/>
+                      <AttributeRef name="testeField" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/OperacaoAdicao.java" AttributDeclaration="int testeField"/>
+                    </classes>
+                    <classes name="Operacao.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java">
+                      <MethodRef name="setTermoUm" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="void setTermoUm( float valor )"/>
+                      <MethodRef name="setTermoDois" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="void setTermoDois( float valor )"/>
+                      <MethodRef name="getTermoUm" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="float getTermoUm( )"/>
+                      <MethodRef name="getTermoDois" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="float getTermoDois( )"/>
+                      <MethodRef name="testeOpcional" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="float testeOpcional( )"/>
+                      <MethodRef name="resultado" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" MethodDeclaration="float resultado( )"/>
+                      <AttributeRef name="termoUm" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" AttributDeclaration="float termoUm"/>
+                      <AttributeRef name="termoDois" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/Operacao.java" AttributDeclaration="float termoDois"/>
+                    </classes>
+                    <classes name="ClasseStatic.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/ClasseStatic.java">
+                      <MethodRef name="getOperacaoAdicao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/ClasseStatic.java" MethodDeclaration="OperacaoAdicao getOperacaoAdicao( )"/>
+                      <MethodRef name="getTeste" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/ClasseStatic.java" MethodDeclaration="String getTeste( )"/>
+                      <MethodRef name="setTeste2" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/ClasseStatic.java" MethodDeclaration="void setTeste2( String teste2 )"/>
+                      <MethodRef name="getTeste2" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/ClasseStatic.java" MethodDeclaration="String getTeste2( )"/>
+                      <AttributeRef name="teste" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/ClasseStatic.java" AttributDeclaration="String teste"/>
+                      <AttributeRef name="teste2" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/ClasseStatic.java" AttributDeclaration="String teste2"/>
+                      <AttributeRef name="teste3" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/ClasseStatic.java" AttributDeclaration="String teste3"/>
+                    </classes>
+                    <subComponents name="plus" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus">
+                      <classes name="Verificador.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java">
+                        <MethodRef name="verificaAdicao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java" MethodDeclaration="void verificaAdicao( )"/>
+                        <MethodRef name="verificaSubtracao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java" MethodDeclaration="void verificaSubtracao( )"/>
+                        <MethodRef name="verificaSubtracaoAlfa" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java" MethodDeclaration="void verificaSubtracaoAlfa( )"/>
+                        <AttributeRef name="testeAdicao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java" AttributDeclaration="OperacaoAdicaoTeste testeAdicao"/>
+                        <AttributeRef name="testeSubtracao" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Verificador.java" AttributDeclaration="OperacaoSubtracaoTeste testeSubtracao"/>
+                      </classes>
+                      <classes name="Rock.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rock.java">
+                        <MethodRef name="abstractMethod" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rock.java" MethodDeclaration="void abstractMethod( )"/>
+                        <MethodRef name="volume" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rock.java" MethodDeclaration="int volume( )"/>
+                        <MethodRef name="killTheName" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rock.java" MethodDeclaration="void killTheName( String name )"/>
+                        <MethodRef name="nuclearBomb" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rock.java" MethodDeclaration="void nuclearBomb( Verificador target )"/>
+                      </classes>
+                      <classes name="Rage.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rage.java">
+                        <MethodRef name="killTheName" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rage.java" MethodDeclaration="void killTheName( String name )"/>
+                        <MethodRef name="nuclearBomb" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rage.java" MethodDeclaration="void nuclearBomb( Verificador target )"/>
+                        <MethodRef name="stones" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rage.java" MethodDeclaration="Verificador stones( Consultoria consultoria float test )"/>
+                        <AttributeRef name="testaAtributo" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rage.java" AttributDeclaration="int testaAtributo"/>
+                        <AttributeRef name="testaAtributo2" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Rage.java" AttributDeclaration="Verificador testaAtributo2"/>
+                      </classes>
+                      <classes name="PontoInterface.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/PontoInterface.java">
+                        <MethodRef name="killTheName" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/PontoInterface.java" MethodDeclaration="void killTheName( String name )"/>
+                        <MethodRef name="nuclearBomb" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/PontoInterface.java" MethodDeclaration="void nuclearBomb( Verificador target )"/>
+                      </classes>
+                      <classes name="Music.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Music.java">
+                        <MethodRef name="abstractMethod" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Music.java" MethodDeclaration="void abstractMethod( )"/>
+                      </classes>
+                      <classes name="Consultoria.java" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Consultoria.java">
+                        <MethodRef name="realizaConsultoria1" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Consultoria.java" MethodDeclaration="void realizaConsultoria1( )"/>
+                        <MethodRef name="realizaConsultoria2" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Consultoria.java" MethodDeclaration="void realizaConsultoria2( )"/>
+                        <AttributeRef name="vf" path="src/br/pucrio/inf/les/genarch/exemplos/ms/framework/plus/Consultoria.java" AttributDeclaration="Verificador vf"/>
+                      </classes>
+                    </subComponents>
+                  </subComponents>
+                </subComponents>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+      </subComponents>
+    </components>
+  </containers>
+</br.pucrio.inf.les.genarch.models.architecture:Architecture>
