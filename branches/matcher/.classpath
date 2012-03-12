@@ -10,5 +10,11 @@
 	<classpathentry exported="true" kind="lib" path="lib/JFlex.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ca.uwaterloo.gp.fmp"/>
 	<classpathentry exported="true" kind="lib" path="lib/genarchannotations.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse_emf_compare/plugins/org.eclipse.emf.common_2.7.0.v20110912-0920.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse_emf_compare/plugins/org.eclipse.emf.compare.diff_1.2.1.v20110913-0926.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse_emf_compare/plugins/org.eclipse.emf.compare.match_1.2.1.v20110913-0926.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse_emf_compare/plugins/org.eclipse.emf.compare_1.2.1.v20110913-0926.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse_emf_compare/plugins/org.eclipse.emf.ecore.xmi_2.7.0.v20110520-1406.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse_emf_compare/plugins/org.eclipse.emf.ecore_2.7.0.v20110912-0920.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
