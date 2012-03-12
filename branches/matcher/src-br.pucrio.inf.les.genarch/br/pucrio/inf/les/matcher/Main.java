@@ -56,7 +56,7 @@ public class Main {
 		// [Demóstenes] - Escolhendo o modelo da outra versão.
 		JFileChooser chooser02 = new JFileChooser();
 		
-		chooser01.setFileFilter(filter);
+		chooser02.setFileFilter(filter);
 		returnval = chooser02.showOpenDialog(null);
 			
 		if(returnval != JFileChooser.APPROVE_OPTION){
