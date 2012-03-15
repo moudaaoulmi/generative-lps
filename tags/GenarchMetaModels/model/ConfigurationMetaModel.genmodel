@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/br.pucrio.inf.les.genarch/src-br.pucrio.inf.les.genarch"
+    editDirectory="/br.pucrio.inf.les.genarch/src-br.pucrio.inf.les.genarch" editorDirectory="/br.pucrio.inf.les.genarch/src-br.pucrio.inf.les.genarch"
+    modelPluginID="br.pucrio.inf.les.genarch" modelName="ConfigurationMetaModel" modelPluginClass=""
+    editPluginClass="br.pucrio.inf.les.genarch.models.configuration.provider.ConfigurationMetaModelEditPlugin"
+    editorPluginClass="br.pucrion.inf.les.genarch.models.configuration.presentation.ConfigurationMetaModelEditorPlugin"
+    testsDirectory="/br.pucrio.inf.les.genarch/src-br.pucrio.inf.les.genarch" testSuiteClass="br.pucrio.inf.les.genarch.models.configuration.tests.ConfigurationMetaModelAllTests"
+    importerID="org.eclipse.emf.importer.ecore">
+  <foreignModel>ConfigurationMetaModel.ecore</foreignModel>
+  <genPackages prefix="Configuration" basePackage="br.pucrio.inf.les.genarch.models"
+      disposableProviderFactory="true" ecorePackage="ConfigurationMetaModel.ecore#/">
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//Configuration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//Configuration/mappingRelationships"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//MappingRelationships">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingRelationships/containers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingRelationships/resourcesContainers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingRelationships/fragmentsContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//MappingEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//MappingEntity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//MappingEntity/path"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//MappingEntity/featureExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//ConfigurationContainer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationContainer/components"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer/folders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer/files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationResourcesContainer/templates"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationFragmentContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//ConfigurationFragmentContainer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationFragmentContainer/fragments"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationComponent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationComponent/classes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationComponent/aspects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationComponent/templates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationComponent/files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationComponent/subComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationClass/Methods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationClass/Fields"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationAspect"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationTemplate"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationFile"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//ConfigurationField/FieldDeclaration"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationFolder">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationFolder/subFolders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationFolder/files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationFolder/templates"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationFragment"/>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//FeatureExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//FeatureExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConfigurationMetaModel.ecore#//ConfigurationMethod/MethodDeclaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationMethod/CodePieces"/>
+    </genClasses>
+    <genClasses ecoreClass="ConfigurationMetaModel.ecore#//ConfigurationCodePiece">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConfigurationMetaModel.ecore#//ConfigurationCodePiece/CodePieces"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
