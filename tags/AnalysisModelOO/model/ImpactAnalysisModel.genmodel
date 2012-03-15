@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/br.pucrio.inf.les.genarch/src-br.pucrio.inf.les.genarch"
+    editDirectory="/br.pucrio.inf.les.genarch/src-br.pucrio.inf.les.genarch" editorDirectory="/br.pucrio.inf.les.genarch/src-br.pucrio.inf.les.genarch"
+    modelPluginID="br.pucrio.inf.les.genarch" modelName="ImpactAnalysisModel" editPluginClass="br.pucrio.inf.les.SPLAnalyser.core.models.impactanalysismodel.provider.ImpactAnalysisModelEditPlugin"
+    editorPluginClass="br.pucrio.inf.les.SPLAnalyser.core.models.impactanalysismodel.presentation.ImpactAnalysisModelEditorPlugin"
+    testsDirectory="/br.pucrio.inf.les.genarch/src-br.pucrio.inf.les.genarch" testSuiteClass="br.pucrio.inf.les.SPLAnalyser.core.models.impactanalysismodel.tests.ImpactAnalysisModelAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" editPluginID="br.pucrio.inf.les.genarch">
+  <foreignModel>ImpactAnalysisModel.ecore</foreignModel>
+  <genPackages prefix="Impactanalysismodel" basePackage="br.pucrio.inf.les.SPLAnalyser.core.models"
+      disposableProviderFactory="true" fileExtensions="iam" ecorePackage="ImpactAnalysisModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImpactAnalysisModel.ecore#//FeatureType">
+      <genEnumLiterals ecoreEnumLiteral="ImpactAnalysisModel.ecore#//FeatureType/Optional"/>
+      <genEnumLiterals ecoreEnumLiteral="ImpactAnalysisModel.ecore#//FeatureType/Mandatory"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImpactAnalysisModel.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="ImpactAnalysisModel.ecore#//Type/Inclusion"/>
+      <genEnumLiterals ecoreEnumLiteral="ImpactAnalysisModel.ecore#//Type/Exclusion"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ImpactAnalysisModel.ecore#//Visibility">
+      <genEnumLiterals ecoreEnumLiteral="ImpactAnalysisModel.ecore#//Visibility/Public"/>
+      <genEnumLiterals ecoreEnumLiteral="ImpactAnalysisModel.ecore#//Visibility/Protected"/>
+      <genEnumLiterals ecoreEnumLiteral="ImpactAnalysisModel.ecore#//Visibility/Private"/>
+    </genEnums>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Feature/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Feature/Type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Feature/FeatureChild"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Feature/Constraints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Feature/isAlternative"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//Mapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Mapping/Features"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Mapping/Assets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Mapping/UseCases"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//Asset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Asset/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Asset/Path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Asset/Signature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Asset/Dependencies"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//ImpactAnalysisModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//ImpactAnalysisModel/FeaturesReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//ImpactAnalysisModel/MappingsReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//ImpactAnalysisModel/AssetsReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//ImpactAnalysisModel/UseCasesReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//ImpactAnalysisModel/ConstraintsReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//ImpactAnalysisModel/CodePiecesReference"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//UseCase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//UseCase/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Field/Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Field/Visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Field/Modifiers"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Method/ReturnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Method/Visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Method/Modifiers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Method/Arguments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Method/CodePieces"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//Class">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Class/DeclaredMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Class/DeclaredFields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Class/Modifiers"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Constraint/ConstraintExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Constraint/AssociatedFeatures"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//Constraint/ConstraintType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//Constraint/FeatureTarget"/>
+    </genClasses>
+    <genClasses ecoreClass="ImpactAnalysisModel.ecore#//CodePiece">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ImpactAnalysisModel.ecore#//CodePiece/CodePieces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//CodePiece/Start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//CodePiece/End"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ImpactAnalysisModel.ecore#//CodePiece/Code"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
